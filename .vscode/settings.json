@@ -1,27 +1,53 @@
 {
-  "javascript.preferences.quoteStyle": "single",
-  "typescript.preferences.quoteStyle": "single",
-  "prettier.jsxSingleQuote": true,
-  "prettier.singleQuote": true,
-  "editor.formatOnSave": true,
-  "eslint.format.enable": true,
-  "eslint.probe": [
-    "javascript",
-    "javascriptreact",
-    "html",
-    "vue",
-    "markdown"
-  ],
-  "eslint.validate": [
-    "javascript", 
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-  ],
-  "typescript.format.enable": false,
-  "typescript.reportStyleChecksAsWarnings": false,
-  "typescript.suggestionActions.enabled": false,
-  "typescript.surveys.enabled": false,
-  "typescript.tsc.autoDetect": "off",
-  "typescript.validate.enable": false
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "javascript.format.enable": false,
+    "editor.formatOnSave": true,
+    "minapp-vscode.prettier": {
+        "useTabs": false,
+        "tabWidth": 4,
+        "printWidth": 100,
+        "singleQuote": false
+    },
+    "prettier.printWidth": 140,
+    "prettier.semi": false,
+    "prettier.tabWidth": 4,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "javascript.preferences.quoteStyle": "single",
+    "typescript.preferences.quoteStyle": "single",
+    "prettier.jsxSingleQuote": true,
+    "prettier.singleQuote": true,
+    "eslint.format.enable": true,
+    "eslint.probe": ["javascript", "javascriptreact", "html", "vue", "markdown"],
+    "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+    "typescript.format.enable": false,
+    "typescript.reportStyleChecksAsWarnings": false,
+    "typescript.suggestionActions.enabled": false,
+    "typescript.surveys.enabled": false,
+    "typescript.tsc.autoDetect": "off",
+    "typescript.validate.enable": false,
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#94abe0",
+        "activityBar.activeBorder": "#c63964",
+        "activityBar.background": "#94abe0",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#c63964",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "statusBar.background": "#6c8cd5",
+        "statusBar.foreground": "#15202b",
+        "statusBarItem.hoverBackground": "#446dca",
+        "titleBar.activeBackground": "#6c8cd5",
+        "titleBar.activeForeground": "#15202b",
+        "titleBar.inactiveBackground": "#6c8cd599",
+        "titleBar.inactiveForeground": "#15202b99"
+    },
+    "peacock.color": "#6C8CD5"
 }
