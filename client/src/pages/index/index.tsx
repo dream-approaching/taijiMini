@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Taro from '@tarojs/taro';
 import { AtIcon } from 'taro-ui';
 import { View, Image } from '@tarojs/components';
@@ -10,7 +10,10 @@ import iconForm from '@src/assets/images/icon-list-form.png';
 import iconLayout from '@src/assets/images/icon-list-layout.png';
 import styles from './index.module.less';
 
-export default class Index extends Component {
+interface MyState {
+  list: Array<any>;
+}
+export default class Index extends React.Component<{}, MyState> {
   constructor(props) {
     super(props);
 

@@ -7,7 +7,7 @@ export default class ViewPage extends Component {
   render() {
     return (
       <View className='page'>
-        <CommonTitle title={123} />
+        <CommonTitle title='123' />
       </View>
     );
   }

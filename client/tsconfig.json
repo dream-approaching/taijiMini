@@ -9,7 +9,7 @@
     "noImplicitAny": false,
     "allowSyntheticDefaultImports": true,
     "outDir": "lib",
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "noUnusedParameters": true,
     "strictNullChecks": true,
     "sourceMap": true,
@@ -18,13 +18,14 @@
     "paths": {
       "@src/*": ["./src/*"]
     },
-    "jsx": "react",
+    "jsx": "preserve",
     "jsxFactory": "Taro.createElement",
     "allowJs": true,
     "resolveJsonModule": true,
-    "typeRoots": ["node_modules/@types", "global.d.ts"]
+    "typeRoots": ["node_modules/@types", "global.d.ts"],
+    "types": ["miniprogram-api-typings"]
   },
   "exclude": ["node_modules", "dist"],
-  "include": ["./src"],
+  "include": ["./src", "global.d.ts"],
   "compileOnSave": false
 }
