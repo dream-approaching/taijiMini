@@ -1,3 +1,5 @@
+const path = require('path');
+
 const config = {
   projectName: 'TaijiMini',
   date: '2021-2-14',
@@ -10,6 +12,9 @@ const config = {
   sourceRoot: 'src',
   outputRoot: 'dist',
   plugins: [],
+  alias: {
+    '@src': path.resolve(__dirname, '..', 'src'),
+  },
   defineConstants: {},
   copy: {
     patterns: [],

@@ -42,5 +42,24 @@
     "compileType": "miniprogram",
     "simulatorType": "wechat",
     "simulatorPluginLibVersion": {},
-    "condition": {}
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "pages/warnup/index",
+                    "pathName": "pages/warnup/index",
+                    "scene": null
+                }
+            ]
+        }
+    }
 }

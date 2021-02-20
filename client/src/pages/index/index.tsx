@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import Taro from '@tarojs/taro';
 import { AtIcon } from 'taro-ui';
 import { View, Image } from '@tarojs/components';
-import logoImg from '../../assets/images/logo.png';
-import iconBasic from '../../assets/images/icon-list-basic.png';
-import iconView from '../../assets/images/icon-list-view.png';
-import iconAction from '../../assets/images/icon-list-action.png';
-import iconForm from '../../assets/images/icon-list-form.png';
-import iconLayout from '../../assets/images/icon-list-layout.png';
+import logoImg from '@src/assets/images/logo.png';
+import iconBasic from '@src/assets/images/icon-list-basic.png';
+import iconView from '@src/assets/images/icon-list-view.png';
+import iconAction from '@src/assets/images/icon-list-action.png';
+import iconForm from '@src/assets/images/icon-list-form.png';
+import iconLayout from '@src/assets/images/icon-list-layout.png';
 import styles from './index.module.less';
 
 export default class Index extends Component {
