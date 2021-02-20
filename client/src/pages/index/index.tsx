@@ -10,7 +10,6 @@ import iconForm from '../../assets/images/icon-list-form.png';
 import iconLayout from '../../assets/images/icon-list-layout.png';
 import styles from './index.module.less';
 
-console.log('%c zjs styles:', 'color: #0e93e0;background: #aaefe5;', styles);
 export default class Index extends Component {
   constructor(props) {
     super(props);
@@ -18,31 +17,31 @@ export default class Index extends Component {
     this.state = {
       list: [
         {
-          id: 'Basic',
+          id: 'warnup',
           title: '热身运动',
           content: '包含头部、关节、踢腿以及桩功等',
           icon: iconBasic,
         },
         {
-          id: 'View',
+          id: 'baduanjin',
           title: '八段锦',
           content: '健身气功八段锦',
           icon: iconView,
         },
         {
-          id: 'Action',
+          id: 'bafawubu',
           title: '八法五步',
           content: '太极八法五步',
           icon: iconAction,
         },
         {
-          id: 'Form',
+          id: 'inside',
           title: '内功心法',
           content: '包含丹田的鼓荡、内旋以及胸腰折叠',
           icon: iconForm,
         },
         {
-          id: 'Layout',
+          id: 'eighteen3',
           title: '八十三式',
           content: '陈式太极拳八十三式',
           icon: iconLayout,
@@ -61,8 +60,7 @@ export default class Index extends Component {
   gotoPanel = (e) => {
     const { id } = e.currentTarget.dataset;
     Taro.navigateTo({
-      // url: `/pages/panel/index?id=${id.toLowerCase()}`
-      url: `/pages/${id.toLowerCase()}/index`,
+      url: `/pages/${id}/index`,
     });
   };
 
