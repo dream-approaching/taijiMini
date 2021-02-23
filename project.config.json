@@ -55,8 +55,9 @@
         "miniprogram": {
             "list": [
                 {
-                    "name": "pages/warnup/index",
-                    "pathName": "pages/warnup/index",
+                    "name": "pages/eighteen3/baiheliangchi/index",
+                    "pathName": "pages/eighteen3/baiheliangchi/index",
+                    "query": "",
                     "scene": null
                 }
             ]

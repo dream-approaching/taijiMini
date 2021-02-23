@@ -1,9 +1,106 @@
+import React from 'react';
 import Taro from '@tarojs/taro';
-import React, { Component } from 'react';
+import { AtIcon } from 'taro-ui';
 import { View } from '@tarojs/components';
+import styles from './index.module.less';
 
-export default class ViewPage extends Component {
+interface MyState {
+  list: Array<any>;
+}
+export default class Index extends React.Component<{}, MyState> {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      list: [
+        {
+          id: 'prepare',
+          title: '预备式',
+          content: '预备式',
+        },
+        {
+          id: 'jingangdaodui',
+          title: '金刚捣碓',
+          content: '金刚捣碓',
+        },
+        {
+          id: 'lanzhayi',
+          title: '懒扎衣',
+          content: '懒扎衣',
+        },
+        {
+          id: 'liufengsibi',
+          title: '六封四闭',
+          content: '六封四闭',
+        },
+        {
+          id: 'danbian',
+          title: '单鞭',
+          content: '单鞭',
+        },
+        {
+          id: 'baiheliangchi',
+          title: '白鹤亮翅 斜行 初收 前蹚拗步',
+          content: '白鹤亮翅 斜行 初收 前蹚拗步',
+        },
+        {
+          id: 'xiexing2',
+          title: '第二斜行 再收 前蹚拗步 掩手肱捶',
+          content: '第二斜行 再收 前蹚拗步 掩手肱捶',
+        },
+        {
+          id: 'zhongpan',
+          title: '中盘',
+          content: '中盘',
+        },
+        {
+          id: 'shantongbei',
+          title: '闪通背',
+          content: '闪通背',
+        },
+      ],
+    };
+  }
+  onShareAppMessage() {
+    return {
+      title: 'Taro UI',
+      path: '/pages/index/index',
+      imageUrl: 'http://storage.360buyimg.com/mtd/home/share1535013100318.jpg',
+    };
+  }
+
+  gotoPanel = (e) => {
+    const { id } = e.currentTarget.dataset;
+    Taro.navigateTo({
+      url: `/pages/eighteen3/${id}/index`,
+    });
+  };
+
   render() {
-    return <View className='page'>123</View>;
+    const { list } = this.state;
+    return (
+      <View className={styles.pageCon}>
+        <View className={styles.listCon}>
+          {list.map((item, index) => (
+            <View
+              className={styles.listItem}
+              key={index}
+              data-id={item.id}
+              data-name={item.title}
+              data-list={item.subpages}
+              onClick={this.gotoPanel}
+            >
+              <View className={styles.itemInfo}>
+                <View className={styles.title}>{item.title}</View>
+                <View className={styles.content}>{item.content}</View>
+              </View>
+              <View className={styles.itemArrow}>
+                <AtIcon value='chevron-right' />
+              </View>
+            </View>
+          ))}
+        </View>
+      </View>
+    );
   }
 }
