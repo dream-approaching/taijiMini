@@ -8,7 +8,6 @@ export interface Props {
 }
 
 function CommonTitle({ title }: Props) {
-  console.log('%c zjs title:', 'color: #0e93e0;background: #aaefe5;', title);
   return <View className={styles.title}>{title}</View>;
 }
 
