@@ -3,9 +3,10 @@ import React from 'react';
 import { View, Image } from '@tarojs/components';
 import CommonTitle from '@src/components/commonTitle';
 import CommonVideo from '@src/components/CommonVideo';
-import { getFileCloudId, lastArr } from '@src/utils';
+import { getFileCloudId, getVideoType } from '@src/utils';
 import { videoType } from '@src/config/constants';
 import styles from './index.module.less';
+import { videoDataConfig } from './dataConfig';
 
 class ImgItem {
   Key: string;
@@ -44,35 +45,8 @@ export default class extends React.Component<{}, MyState> {
         imgList.push(item);
       }
       if (format === 'mp4') {
-        const fileName = lastArr(item.Key.split('/'));
-        const type = fileName.split('.')[0].split('_')[1];
-        let title = '';
-        let shotInfo = '';
-        let index = 0;
-        switch (type) {
-          case videoType.attack:
-            title = '攻防含义';
-            shotInfo = '吴少华 2019年11月25日 娄底市';
-            index = 3;
-            break;
-          case videoType.detail:
-            title = '动作要领';
-            shotInfo = '吴少华 2019年11月25日 娄底市';
-            index = 2;
-            break;
-          case videoType.number:
-            title = '分解动作';
-            shotInfo = '吴少华 2019年11月25日 娄底市';
-            index = 1;
-            break;
-          default:
-            // normal
-            title = '正常';
-            shotInfo = '吴少华 2019年11月25日 娄底市';
-            index = 0;
-            break;
-        }
-        videoList[index] = { ...item, title, shotInfo };
+        const type = getVideoType(item.Key);
+        videoList[videoType[type].index] = { ...item, ...videoDataConfig[videoType[type].name] };
       }
     });
     this.setState({
@@ -93,6 +67,18 @@ export default class extends React.Component<{}, MyState> {
     const { imgList, videoList } = this.state;
     return (
       <View className={styles.page}>
+        <CommonTitle level={1} title='视频描述' />
+        {videoList.map((item) => {
+          return (
+            <View className={styles.videoCon} key={item.ETag}>
+              <CommonVideo
+                title={item.title}
+                shotInfo={item.shotInfo}
+                src={getFileCloudId(item.Key)}
+              />
+            </View>
+          );
+        })}
         <CommonTitle level={1} title='图文描述' />
         <View className={styles.imgCon}>
           {imgList.map((item) => {
@@ -108,19 +94,6 @@ export default class extends React.Component<{}, MyState> {
             );
           })}
         </View>
-
-        <CommonTitle level={1} title='视频描述' />
-        {videoList.map((item) => {
-          return (
-            <View className={styles.videoCon} key={item.ETag}>
-              <CommonVideo
-                title={item.title}
-                shotInfo={item.shotInfo}
-                src={getFileCloudId(item.Key)}
-              />
-            </View>
-          );
-        })}
       </View>
     );
   }
