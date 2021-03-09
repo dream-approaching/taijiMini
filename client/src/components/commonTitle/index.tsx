@@ -5,10 +5,11 @@ import styles from './index.module.less';
 
 export interface Props {
   title: string;
+  level?: number;
 }
 
-function CommonTitle({ title }: Props) {
-  return <View className={styles.title}>{title}</View>;
+function CommonTitle({ title, level = 2 }: Props) {
+  return <View className={styles[`title${level}`]}>{title}</View>;
 }
 
 export default CommonTitle;
