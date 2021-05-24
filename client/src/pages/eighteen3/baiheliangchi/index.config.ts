@@ -1,3 +1,3 @@
 export default {
-  navigationBarTitleText: '八十三式-白鹤亮翅',
+  navigationBarTitleText: '白鹤亮翅 斜行 初收 前蹚拗步',
 };

@@ -36,7 +36,7 @@ export default class Index extends React.Component<{}, MyState> {
         {
           id: 'danbian',
           title: '单鞭',
-          content: '单鞭',
+          content: '全套共有 7 个单鞭。 分别于第5、30、48、52、57、70、77 式',
         },
         {
           id: 'baiheliangchi',
