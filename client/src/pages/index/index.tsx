@@ -52,9 +52,16 @@ export default class Index extends React.Component<{}, MyState> {
       ],
     };
   }
+
+  onLoad = () => {
+    const { miniProgram } = Taro.getAccountInfoSync();
+    const version = miniProgram.version;
+    console.log('%c zjs version:', 'color: #0e93e0;background: #aaefe5;', version);
+  };
+
   onShareAppMessage() {
     return {
-      title: 'Taro UI',
+      title: '刘师傅太极教学',
       path: '/pages/index/index',
       imageUrl: 'http://storage.360buyimg.com/mtd/home/share1535013100318.jpg',
     };

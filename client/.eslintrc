@@ -13,6 +13,7 @@
     "project": "tsconfig.json",
     "createDefaultProgram": true
   },
+  "globals": ["wx"],
   "rules": {
     "no-undef": "error",
     "no-unused-vars": ["error", { "varsIgnorePattern": "Taro|React" }],

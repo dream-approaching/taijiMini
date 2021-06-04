@@ -1787,11 +1787,6 @@
   resolved "https://registry.yarnpkg.com/@types/webpack-env/-/webpack-env-1.16.0.tgz#8c0a9435dfa7b3b1be76562f3070efb3f92637b4"
   integrity sha512-Fx+NpfOO0CpeYX2g9bkvX8O5qh9wrU1sOF4g8sft4Mu7z+qfe387YlyY8w8daDyDsKY5vUxM0yxkAYnbkRbZEw==
 
-"@types/wechat-miniprogram@^3.2.0":
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/@types/wechat-miniprogram/-/wechat-miniprogram-3.2.0.tgz#6b4034155856d31cd9f342efd217dbc27ea80fb9"
-  integrity sha512-9Wrjz8cOn/woj/T8uUlNQTuxTj1StwFvVB54ITCPKSRpYbClmc7yiOupH68JKh1t5R3pkmf5v1adwalzc4PMIg==
-
 "@typescript-eslint/eslint-plugin@^2.x":
   version "2.34.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-2.34.0.tgz#6f8ce8a46c7dea4a6f1d171d2bb8fbae6dac2be9"
@@ -8980,6 +8975,11 @@ minipass@^3.0.0, minipass@^3.1.1:
   integrity sha512-Mgd2GdMVzY+x3IJ+oHnVM+KG3lA5c8tnabyJKmHSaG2kAGpudxuOf8ToDkhumF7UzME7DecbQE9uOZhNm7PuJg==
   dependencies:
     yallist "^4.0.0"
+
+miniprogram-api-typings@*:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/miniprogram-api-typings/-/miniprogram-api-typings-3.3.2.tgz#1e6aa65817e6534850141cd2af23eeff6ba61b4e"
+  integrity sha512-i8yxwPOGYZ33J/VoJR/mA0Ps2JKuUE6wsn8pdHqKpUrskZuxNsjVf8Z5TPLBisYis3drLdJQ5Gjon8WIwXswYg==
 
 miniprogram-api-typings@^3.2.2:
   version "3.2.2"
