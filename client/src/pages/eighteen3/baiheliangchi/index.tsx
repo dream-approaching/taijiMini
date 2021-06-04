@@ -29,28 +29,36 @@ export default class extends React.Component<{}, MyState> {
   };
 
   async componentDidMount() {
-    const fileListRes: Record<string, any> = await Taro.cloud.callFunction({
-      name: 'getFileList',
-      data: {
-        path: '83/baiheliangchi',
-      },
-    });
-    const imgList: Array<ImgItem> = [];
-    const videoList: Array<VideoItem> = [];
-    fileListRes.result.fileList.forEach((item: ImgItem) => {
-      const format = item.Key.split('.')[1];
-      if (format === 'png' || format === 'jpg') {
-        imgList.push(item);
-      }
-      if (format === 'mp4') {
-        const type = getVideoType(item.Key);
-        videoList[videoType[type].index] = { ...item, ...videoDataConfig[videoType[type].name] };
-      }
-    });
-    this.setState({
-      imgList,
-      videoList,
-    });
+    try {
+      Taro.showLoading({ title: '加载中' });
+      const fileListRes: Record<string, any> = await Taro.cloud.callFunction({
+        name: 'getFileList',
+        data: {
+          path: '83/baiheliangchi',
+        },
+      });
+      const imgList: Array<ImgItem> = [];
+      const videoList: Array<VideoItem> = [];
+      fileListRes.result.fileList.forEach((item: ImgItem) => {
+        const format = item.Key.split('.')[1];
+        if (format === 'png' || format === 'jpg') {
+          imgList.push(item);
+        }
+        if (format === 'mp4') {
+          const type = getVideoType(item.Key);
+          videoList[videoType[type].index] = { ...item, ...videoDataConfig[videoType[type].name] };
+        }
+      });
+      this.setState({
+        imgList,
+        videoList,
+      });
+    } catch (error) {
+      Taro.showToast({ title: '数据拉取失败，请重新进入页面' });
+      console.log('%c zjs error:', 'color: #0e93e0;background: #aaefe5;', error);
+    } finally {
+      Taro.hideLoading();
+    }
   }
 
   render() {
