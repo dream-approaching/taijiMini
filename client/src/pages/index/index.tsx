@@ -1,7 +1,7 @@
 import React from 'react';
 import Taro from '@tarojs/taro';
 import { AtIcon } from 'taro-ui';
-import { View, Image } from '@tarojs/components';
+import { View, Image, Navigator } from '@tarojs/components';
 import logoImg from '@src/assets/images/logo.png';
 import iconBasic from '@src/assets/images/icon-list-basic.png';
 import iconView from '@src/assets/images/icon-list-view.png';
@@ -67,13 +67,6 @@ export default class Index extends React.Component<{}, MyState> {
     };
   }
 
-  gotoPanel = (e) => {
-    const { id } = e.currentTarget.dataset;
-    Taro.navigateTo({
-      url: `/pages/${id}/index`,
-    });
-  };
-
   render() {
     const { list } = this.state;
     return (
@@ -83,14 +76,7 @@ export default class Index extends React.Component<{}, MyState> {
         </View>
         <View className={styles.listCon}>
           {list.map((item, index) => (
-            <View
-              className={styles.listItem}
-              key={index}
-              data-id={item.id}
-              data-name={item.title}
-              data-list={item.subpages}
-              onClick={this.gotoPanel}
-            >
+            <Navigator className={styles.listItem} key={index} url={`/pages/${item.id}/index`}>
               <View className={styles.itemIcon}>
                 <Image src={item.icon} className={styles.itemImg} mode='widthFix' />
               </View>
@@ -101,7 +87,7 @@ export default class Index extends React.Component<{}, MyState> {
               <View className={styles.itemArrow}>
                 <AtIcon value='chevron-right' />
               </View>
-            </View>
+            </Navigator>
           ))}
         </View>
       </View>

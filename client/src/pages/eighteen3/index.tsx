@@ -1,7 +1,7 @@
 import React from 'react';
 import Taro from '@tarojs/taro';
 import { AtIcon } from 'taro-ui';
-import { View } from '@tarojs/components';
+import { View, Navigator } from '@tarojs/components';
 import styles from './index.module.less';
 
 interface MyState {
@@ -69,26 +69,16 @@ export default class Index extends React.Component<{}, MyState> {
     };
   }
 
-  gotoPanel = (e) => {
-    const { id } = e.currentTarget.dataset;
-    Taro.navigateTo({
-      url: `/pages/eighteen3/${id}/index`,
-    });
-  };
-
   render() {
     const { list } = this.state;
     return (
       <View className={styles.pageCon}>
         <View className={styles.listCon}>
           {list.map((item, index) => (
-            <View
+            <Navigator
               className={styles.listItem}
               key={index}
-              data-id={item.id}
-              data-name={item.title}
-              data-list={item.subpages}
-              onClick={this.gotoPanel}
+              url={`/pages/eighteen3/${item.id}/index`}
             >
               <View className={styles.itemInfo}>
                 <View className={styles.title}>{item.title}</View>
@@ -97,7 +87,7 @@ export default class Index extends React.Component<{}, MyState> {
               <View className={styles.itemArrow}>
                 <AtIcon value='chevron-right' />
               </View>
-            </View>
+            </Navigator>
           ))}
         </View>
       </View>
