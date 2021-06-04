@@ -90,7 +90,7 @@ export default class extends React.Component<PropsType, MyState> {
                         <View key={item.ETag}>
                           <View className={styles.imgTitle}>
                             <Text className={styles.titleText}>{`${index + 1}、${
-                              imageDataConfig ? imageDataConfig[item.Key].title : ''
+                              imageDataConfig ? imageDataConfig[item.Key]?.title : ''
                             }`}</Text>
                           </View>
                           <Image
