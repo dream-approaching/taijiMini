@@ -4,19 +4,7 @@ import { getVideoType } from '@src/utils';
 import { videoType } from '@src/config/constants';
 import PageContainer from '@src/components/PageContainer';
 import { imageDataConfig, videoDataConfig } from './dataConfig';
-
-class ImgItem {
-  Key: string;
-  ETag: string;
-  title?: string;
-}
-
-class VideoItem {
-  Key: string;
-  ETag: string;
-  title: string;
-  shotInfo?: string;
-}
+import { ImgItem, VideoItem } from '@src/config/common';
 
 interface MyState {
   imgList: Array<ImgItem>;
@@ -53,11 +41,11 @@ export default class extends React.Component<{}, MyState> {
         imgList,
         videoList,
       });
-    } catch (error) {
-      Taro.showToast({ title: '数据拉取失败，请重新进入页面' });
-      console.log('%c zjs error:', 'color: #0e93e0;background: #aaefe5;', error);
-    } finally {
       Taro.hideLoading();
+    } catch (error) {
+      Taro.hideLoading();
+      Taro.showToast({ title: '数据拉取失败，请重新进入页面', icon: 'none' });
+      console.log('%c zjs error:', 'color: #0e93e0;background: #aaefe5;', error);
     }
   }
 

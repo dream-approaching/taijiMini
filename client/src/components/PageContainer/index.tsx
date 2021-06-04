@@ -1,5 +1,5 @@
 import Taro from '@tarojs/taro';
-import React from 'react';
+import React, { Fragment } from 'react';
 import { AtTabs, AtTabsPane, AtButton } from 'taro-ui';
 import { View, Image, Text, ScrollView } from '@tarojs/components';
 import CommonVideo from '@src/components/CommonVideo';
@@ -20,9 +20,10 @@ class VideoItem {
 }
 
 interface PropsType {
-  imgList: Array<ImgItem>;
-  videoList: Array<VideoItem>;
-  imageDataConfig: object;
+  imgList?: Array<ImgItem>;
+  videoList?: Array<VideoItem>;
+  imageDataConfig?: object;
+  children?: any;
 }
 interface MyState {
   currentTab: number;
@@ -47,7 +48,7 @@ export default class extends React.Component<PropsType, MyState> {
     const { imgList } = this.props;
     Taro.previewImage({
       current: currentImg, // 当前显示图片的http链接
-      urls: imgList.map((item) => getFileCloudId(item.Key)), // 需要预览的图片http链接列表
+      urls: imgList?.map((item) => getFileCloudId(item.Key)) || [], // 需要预览的图片http链接列表
     });
   };
 
@@ -68,7 +69,8 @@ export default class extends React.Component<PropsType, MyState> {
 
   render() {
     const { currentTab, showData } = this.state;
-    const { imgList, videoList, imageDataConfig } = this.props;
+    const { imgList, videoList, imageDataConfig, children } = this.props;
+    console.log('%c zjs children:', 'color: #0e93e0;background: #aaefe5;', children);
     const tabList = [{ title: '图文描述' }, { title: '视频描述' }];
     return (
       <View className={styles.page}>
@@ -81,41 +83,47 @@ export default class extends React.Component<PropsType, MyState> {
           >
             <AtTabsPane current={currentTab} index={0}>
               <ScrollView scroll-y className={styles.orderList} lowerThreshold={200}>
-                <View className={styles.imgCon}>
-                  {imgList.map((item, index) => {
-                    return (
-                      <View key={item.ETag}>
-                        <View className={styles.imgTitle}>
-                          <Text className={styles.titleText}>{`${index + 1}、${
-                            imageDataConfig[item.Key].title
-                          }`}</Text>
+                {(children && children[0]) || children || (
+                  <View className={styles.imgCon}>
+                    {imgList?.map((item, index) => {
+                      return (
+                        <View key={item.ETag}>
+                          <View className={styles.imgTitle}>
+                            <Text className={styles.titleText}>{`${index + 1}、${
+                              imageDataConfig ? imageDataConfig[item.Key].title : ''
+                            }`}</Text>
+                          </View>
+                          <Image
+                            onClick={() => this.handlePreviewImg(getFileCloudId(item.Key))}
+                            mode='widthFix'
+                            lazyLoad
+                            className={styles.img}
+                            src={getFileCloudId(item.Key)}
+                          />
                         </View>
-                        <Image
-                          onClick={() => this.handlePreviewImg(getFileCloudId(item.Key))}
-                          mode='widthFix'
-                          lazyLoad
-                          className={styles.img}
-                          src={getFileCloudId(item.Key)}
-                        />
-                      </View>
-                    );
-                  })}
-                </View>
+                      );
+                    })}
+                  </View>
+                )}
               </ScrollView>
             </AtTabsPane>
             <AtTabsPane current={currentTab} index={1}>
               <ScrollView scroll-y className={styles.orderList} lowerThreshold={200}>
-                {videoList.map((item) => {
-                  return (
-                    <View className={styles.videoCon} key={item.ETag}>
-                      <CommonVideo
-                        title={item.title}
-                        shotInfo={item.shotInfo}
-                        src={getFileCloudId(item.Key)}
-                      />
-                    </View>
-                  );
-                })}
+                {(children && children[1]) || (
+                  <Fragment>
+                    {videoList?.map((item) => {
+                      return (
+                        <View className={styles.videoCon} key={item.ETag}>
+                          <CommonVideo
+                            title={item.title}
+                            shotInfo={item.shotInfo}
+                            src={getFileCloudId(item.Key)}
+                          />
+                        </View>
+                      );
+                    })}
+                  </Fragment>
+                )}
               </ScrollView>
             </AtTabsPane>
           </AtTabs>
