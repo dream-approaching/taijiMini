@@ -56,7 +56,7 @@ export default class Index extends React.Component<{}, MyState> {
         {
           id: 'zhongpan',
           title: '中盘',
-          content: '中盘',
+          content: '全套共有 2 个中盘。 分别于第24、64 式',
         },
         {
           id: 'shantongbei',
