@@ -1,9 +1,66 @@
 import Taro from '@tarojs/taro';
-import React, { Component } from 'react';
-import { View } from '@tarojs/components';
+import React from 'react';
+import { getVideoType } from '@src/utils';
+import { videoType } from '@src/config/constants';
+import PageContainer from '@src/components/PageContainer';
+import { imageDataConfig, videoDataConfig } from './dataConfig';
+import { ImgItem, VideoItem } from '@src/config/common';
 
-export default class ViewPage extends Component {
+interface MyState {
+  imgList: Array<ImgItem>;
+  videoList: Array<VideoItem>;
+}
+export default class extends React.Component<{}, MyState> {
+  state: MyState = {
+    imgList: [],
+    videoList: [],
+  };
+
+  async componentDidMount() {
+    try {
+      Taro.showLoading({ title: '加载中' });
+      const fileListRes: Record<string, any> = await Taro.cloud.callFunction({
+        name: 'getFileList',
+        data: {
+          path: 'bafawubu',
+        },
+      });
+      const imgList: Array<ImgItem> = [];
+      const videoList: Array<VideoItem> = [];
+      fileListRes.result.fileList.forEach((item: ImgItem) => {
+        const [path, format] = item.Key.split('.');
+        if (format === 'png' || format === 'jpg') {
+          const keyArr = Object.keys(imageDataConfig);
+          fileListRes.result.fileList.map((item) => {
+            if (keyArr.indexOf(item.Key) > -1) {
+              const index = keyArr.findIndex((keyItem) => item.Key === keyItem);
+              imgList[index] = {
+                ...item,
+                desc: `${index + 1}、${imageDataConfig[item.Key].title}`,
+              };
+            }
+          });
+        }
+        if (format === 'mp4') {
+          const [paths, name] = path.split('/');
+          videoList[videoDataConfig[name].index] = { ...item, ...videoDataConfig[name] };
+        }
+      });
+      console.log('%c zjs imgList:', 'color: #0e93e0;background: #aaefe5;', imgList);
+      this.setState({
+        imgList,
+        videoList,
+      });
+      Taro.hideLoading();
+    } catch (error) {
+      Taro.hideLoading();
+      Taro.showToast({ title: '数据拉取失败，请重新进入页面', icon: 'none' });
+      console.log('%c zjs error:', 'color: #0e93e0;background: #aaefe5;', error);
+    }
+  }
+
   render() {
-    return <View className='page'>123</View>;
+    const { imgList, videoList } = this.state;
+    return <PageContainer imgList={imgList} videoList={videoList} />;
   }
 }

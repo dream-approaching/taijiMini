@@ -46,6 +46,7 @@ export default class ViewPage extends Component {
             ]}
           />
         </View>
+        <View>暂无视频</View>
       </PageContainer>
     );
   }

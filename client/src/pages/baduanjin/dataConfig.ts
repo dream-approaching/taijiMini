@@ -92,10 +92,10 @@ export const imageDataConfig = {
 export const videoDataConfig = {
   video01: {
     title: '前半段',
-    shotInfo: '郑金寿 2020年6月11日 深圳市',
+    shotInfo: '郑金寿 2020年06月11日 深圳市',
   },
   video02: {
     title: '后半段',
-    shotInfo: '郑金寿 2020年6月11日 深圳市',
+    shotInfo: '郑金寿 2020年06月11日 深圳市',
   },
 };

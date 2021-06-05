@@ -30,7 +30,16 @@ export default class extends React.Component<{}, MyState> {
       fileListRes.result.fileList.forEach((item: ImgItem) => {
         const format = item.Key.split('.')[1];
         if (format === 'png' || format === 'jpg') {
-          imgList.push(item);
+          const keyArr = Object.keys(imageDataConfig);
+          fileListRes.result.fileList.map((item) => {
+            if (keyArr.indexOf(item.Key) > -1) {
+              const index = keyArr.findIndex((keyItem) => item.Key === keyItem);
+              imgList[index] = {
+                ...item,
+                desc: `${index + 1}、${imageDataConfig[item.Key].title}`,
+              };
+            }
+          });
         }
         if (format === 'mp4') {
           const type = getVideoType(item.Key);
@@ -51,8 +60,6 @@ export default class extends React.Component<{}, MyState> {
 
   render() {
     const { imgList, videoList } = this.state;
-    return (
-      <PageContainer imgList={imgList} videoList={videoList} imageDataConfig={imageDataConfig} />
-    );
+    return <PageContainer imgList={imgList} videoList={videoList} />;
   }
 }

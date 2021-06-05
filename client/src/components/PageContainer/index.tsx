@@ -5,19 +5,7 @@ import { View, Image, Text, ScrollView } from '@tarojs/components';
 import CommonVideo from '@src/components/CommonVideo';
 import { getFileCloudId } from '@src/utils';
 import styles from './index.module.less';
-
-class ImgItem {
-  Key: string;
-  ETag: string;
-  title?: string;
-}
-
-class VideoItem {
-  Key: string;
-  ETag: string;
-  title: string;
-  shotInfo?: string;
-}
+import { ImgItem, VideoItem } from '@src/config/common';
 
 interface PropsType {
   imgList?: Array<ImgItem>;
@@ -69,7 +57,7 @@ export default class extends React.Component<PropsType, MyState> {
 
   render() {
     const { currentTab, showData } = this.state;
-    const { imgList, videoList, imageDataConfig, children } = this.props;
+    const { imgList, videoList, children } = this.props;
     console.log('%c zjs children:', 'color: #0e93e0;background: #aaefe5;', children);
     const tabList = [{ title: '图文描述' }, { title: '视频描述' }];
     return (
@@ -85,13 +73,11 @@ export default class extends React.Component<PropsType, MyState> {
               <ScrollView scroll-y className={styles.orderList} lowerThreshold={200}>
                 {(children && children[0]) || children || (
                   <View className={styles.imgCon}>
-                    {imgList?.map((item, index) => {
+                    {imgList?.map((item) => {
                       return (
                         <View key={item.ETag}>
                           <View className={styles.imgTitle}>
-                            <Text className={styles.titleText}>{`${index + 1}、${
-                              imageDataConfig ? imageDataConfig[item.Key]?.title : ''
-                            }`}</Text>
+                            <Text className={styles.titleText}>{item.desc}</Text>
                           </View>
                           <Image
                             onClick={() => this.handlePreviewImg(getFileCloudId(item.Key))}
