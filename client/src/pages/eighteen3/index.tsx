@@ -31,7 +31,7 @@ export default class Index extends React.Component<{}, MyState> {
         {
           id: 'lanzhayi',
           title: '懒扎衣',
-          content: '懒扎衣',
+          content: '全套共有 2 个懒扎衣。 分别于第3、55 式',
         },
         {
           id: 'liufengsibi',
