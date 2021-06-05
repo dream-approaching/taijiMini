@@ -1,9 +1,14 @@
 import Taro from '@tarojs/taro';
-import React, { Component } from 'react';
-import { View } from '@tarojs/components';
+import React from 'react';
+import { imageDataConfig, videoDataConfig } from './dataConfig';
+import CommonPage from '@src/components/CommonPage';
 
-export default class ViewPage extends Component {
-  render() {
-    return <View className='page'>123</View>;
-  }
-}
+export default () => {
+  return (
+    <CommonPage
+      path='83/liufengsibi'
+      imageDataConfig={imageDataConfig}
+      videoDataConfig={videoDataConfig}
+    />
+  );
+};
