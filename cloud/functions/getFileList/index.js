@@ -22,7 +22,9 @@ const { storage } = new CloudBase({
  *
  */
 exports.main = async (event, context) => {
+    console.log('%c zjs event:', 'color: #0e93e0;background: #aaefe5;', event)
     const { path } = event
+    console.log('%c zjs path:', 'color: #0e93e0;background: #aaefe5;', path)
     const wxContext = cloud.getWXContext()
 
     const fileListRes = await storage.listDirectoryFiles(path)
