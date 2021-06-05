@@ -70,7 +70,7 @@ export default class extends React.Component<MyProps, MyState> {
       });
       Taro.hideLoading();
     } catch (error) {
-      if (this.tryTimes >= 3) {
+      if (this.tryTimes >= 5) {
         Taro.hideLoading();
         Taro.showToast({ title: '数据拉取失败，请重新进入页面', icon: 'none' });
       } else {
