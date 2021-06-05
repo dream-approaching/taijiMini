@@ -50,8 +50,8 @@ export default class Index extends React.Component<{}, MyState> {
         },
         {
           id: 'xiexing2',
-          title: '第二斜行 再收 前蹚拗步 掩手肱捶',
-          content: '第二斜行 再收 前蹚拗步 掩手肱捶',
+          title: '第二斜行 再收 前蹚拗步 掩手肱捶 十字手',
+          content: '与前面三式相似，只有衔接动作有些不同',
         },
         {
           id: 'zhongpan',

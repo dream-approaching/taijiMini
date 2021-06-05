@@ -1,3 +1,3 @@
 export default {
-  navigationBarTitleText: '八十三式',
+  navigationBarTitleText: '第二斜行 再收 前蹚拗步 掩手肱捶 十字手',
 };
