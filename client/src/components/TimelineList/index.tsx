@@ -14,7 +14,6 @@ interface MyProps {
 export default class TimelineList extends Component<MyProps, {}> {
   render() {
     const { title, items } = this.props;
-    console.log('%c zjs items:', 'color: #0e93e0;background: #aaefe5;', items);
     return (
       <View className={styles.timelineCon}>
         {title && <CommonTitle title={title} />}

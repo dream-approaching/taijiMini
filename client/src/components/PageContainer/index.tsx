@@ -58,7 +58,6 @@ export default class extends React.Component<PropsType, MyState> {
   render() {
     const { currentTab, showData } = this.state;
     const { imgList, videoList, children } = this.props;
-    console.log('%c zjs children:', 'color: #0e93e0;background: #aaefe5;', children);
     const tabList = [{ title: '图文描述' }, { title: '视频描述' }];
     return (
       <View className={styles.page}>

@@ -21,7 +21,13 @@ export default class extends React.Component<MyProps, MyState> {
     videoList: [],
   };
 
-  async componentDidMount() {
+  tryTimes = 0;
+
+  componentDidMount() {
+    this.getData();
+  }
+
+  getData = async () => {
     const { path, imageDataConfig, videoDataConfig, videoCustom } = this.props;
     try {
       Taro.showLoading({ title: '加载中' });
@@ -54,28 +60,26 @@ export default class extends React.Component<MyProps, MyState> {
             };
           } else {
             const [paths, name] = keyPath.split('/');
-            console.log('%c zjs name:', 'color: #0e93e0;background: #aaefe5;', name);
             videoList.push({ ...item, ...videoDataConfig[name] });
           }
         }
       });
-      console.log(
-        '%c zjs videoDataConfig:',
-        'color: #0e93e0;background: #aaefe5;',
-        videoDataConfig
-      );
-      console.log('%c zjs videoList:', 'color: #0e93e0;background: #aaefe5;', videoList);
       this.setState({
         imgList,
         videoList,
       });
       Taro.hideLoading();
     } catch (error) {
-      Taro.hideLoading();
-      Taro.showToast({ title: '数据拉取失败，请重新进入页面', icon: 'none' });
-      console.log('%c zjs error:', 'color: #0e93e0;background: #aaefe5;', error);
+      if (this.tryTimes >= 3) {
+        Taro.hideLoading();
+        Taro.showToast({ title: '数据拉取失败，请重新进入页面', icon: 'none' });
+      } else {
+        console.log('%c zjs error:', 'color: #0e93e0;background: #aaefe5;', error);
+        this.tryTimes += 1;
+        this.getData();
+      }
     }
-  }
+  };
 
   render() {
     const { imgList, videoList } = this.state;

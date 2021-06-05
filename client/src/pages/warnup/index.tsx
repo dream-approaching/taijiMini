@@ -24,7 +24,6 @@ export default class ViewPage extends Component<{}, MyState> {
         },
       });
       const videoList: Array<VideoItem> = [];
-      console.log('%c zjs fileListRes:', 'color: #0e93e0;background: #aaefe5;', fileListRes);
       fileListRes.result.fileList.forEach((item: VideoItem) => {
         const format = item.Key.split('.')[1];
         if (format === 'mp4') {
@@ -44,7 +43,6 @@ export default class ViewPage extends Component<{}, MyState> {
 
   render() {
     const { videoList } = this.state;
-    console.log('%c zjs videoList:', 'color: #0e93e0;background: #aaefe5;', videoList);
     return (
       <PageContainer videoList={videoList}>
         <View>
