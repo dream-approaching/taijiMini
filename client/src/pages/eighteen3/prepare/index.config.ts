@@ -1,3 +1,3 @@
 export default {
-  navigationBarTitleText: '八十三式',
+  navigationBarTitleText: '预备式',
 };

@@ -16,7 +16,7 @@ export default class Index extends React.Component<{}, MyState> {
         {
           id: 'prepare',
           title: '预备式',
-          content: '预备式',
+          content: '预备式也为第 1 式。',
         },
         {
           id: 'jingangdaodui2',
