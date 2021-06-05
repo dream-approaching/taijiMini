@@ -61,7 +61,7 @@ export default class Index extends React.Component<{}, MyState> {
         {
           id: 'shantongbei',
           title: '闪通背',
-          content: '闪通背',
+          content: '全套共有 2 个闪通背。 分别于第27、67 式',
         },
       ],
     };
