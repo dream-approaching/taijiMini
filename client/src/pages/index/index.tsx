@@ -122,7 +122,7 @@ export default class Index extends React.Component<{}, MyState> {
           ))}
         </View>
         <View className={styles.footer}>
-          <Text className={styles.version}>版本：{version}</Text>
+          <Text className={styles.version}>版本：{version || '2.0.0'}</Text>
           <Button open-type='contact' size='mini' className={styles.serviceBtn}>
             联系客服
           </Button>
