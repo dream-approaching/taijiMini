@@ -94,4 +94,28 @@
       }
     }
   }
+
+  .footer {
+    height: 40px;
+    font-size: 20px;
+    color: #666;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 60px;
+    .version {
+      flex: 1;
+      text-align: center;
+    }
+    .serviceBtn {
+      flex: 1;
+      border: none;
+      font-size: 22px;
+      color: #666;
+      background: transparent;
+      &::after {
+        display: none;
+      }
+    }
+  }
 }

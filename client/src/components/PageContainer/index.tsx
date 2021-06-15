@@ -59,17 +59,26 @@ export default class extends React.Component<PropsType, MyState> {
     const { currentTab, showData } = this.state;
     const { imgList, videoList, children } = this.props;
     const tabList = [{ title: '图文描述' }, { title: '视频描述' }];
+    const localShow = Taro.getStorageSync('showVideo'); // 本地缓存是否允许显示
+    const { globalHide, videoShow } = Taro.getStorageSync('dbShowConfig'); // 数据库是否允许显示
+    // 审核时候 videoShow 需要改成 false，此时如果缓存中 showVideo 为 true 时也是会显示的
+    // globalHide 值一般不做修改，除非特殊情况，比如被举报了，改为 true 时，视频全部隐藏
+    const showVideo = !globalHide && (localShow || videoShow);
     return (
       <View className={styles.page}>
         {showData ? (
           <AtTabs
-            className={styles.tabs}
+            className={`${styles.tabs} ${!showVideo ? styles.tabHide : ''}`}
             current={currentTab}
             tabList={tabList}
             onClick={this.handleToggleTab}
           >
             <AtTabsPane current={currentTab} index={0}>
-              <ScrollView scroll-y className={styles.orderList} lowerThreshold={200}>
+              <ScrollView
+                scroll-y
+                className={`${styles.orderList} ${!showVideo ? styles.withoutTop : ''}`}
+                lowerThreshold={200}
+              >
                 {(children && children[0]) || children || (
                   <View className={styles.imgCon}>
                     {imgList?.map((item) => {
@@ -93,7 +102,11 @@ export default class extends React.Component<PropsType, MyState> {
               </ScrollView>
             </AtTabsPane>
             <AtTabsPane current={currentTab} index={1}>
-              <ScrollView scroll-y className={styles.orderList} lowerThreshold={200}>
+              <ScrollView
+                scroll-y
+                className={`${styles.orderList} ${!showVideo ? 'withoutTop' : ''}`}
+                lowerThreshold={200}
+              >
                 {(children && children[1]) || (
                   <Fragment>
                     {videoList?.map((item) => {

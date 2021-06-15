@@ -1,23 +1,27 @@
 import React from 'react';
 import Taro from '@tarojs/taro';
 import { AtIcon } from 'taro-ui';
-import { View, Image, Navigator } from '@tarojs/components';
+import { View, Image, Navigator, Text, Button } from '@tarojs/components';
 import logoImg from '@src/assets/images/logo.png';
 import iconBasic from '@src/assets/images/icon-list-basic.png';
 import iconView from '@src/assets/images/icon-list-view.png';
 import iconAction from '@src/assets/images/icon-list-action.png';
 import iconForm from '@src/assets/images/icon-list-form.png';
 import iconLayout from '@src/assets/images/icon-list-layout.png';
+import config from '@src/config';
 import styles from './index.module.less';
+import { muchclickEvent } from '@src/utils';
 
 interface MyState {
   list: Array<any>;
+  version: any;
 }
 export default class Index extends React.Component<{}, MyState> {
   constructor(props) {
     super(props);
 
     this.state = {
+      version: '1.0.1',
       list: [
         {
           id: 'warnup',
@@ -53,10 +57,31 @@ export default class Index extends React.Component<{}, MyState> {
     };
   }
 
+  imgRef = null;
+
+  async componentDidMount() {
+    this.setVideoShow(false);
+
+    // 连续点击15下 在本地缓存设置 showVideo 为true
+    muchclickEvent(15, this.imgRef, () => {
+      const showVideo = Taro.getStorageSync('showVideo');
+      if (!showVideo) {
+        Taro.setStorageSync('showVideo', true);
+      }
+    });
+  }
+
+  setVideoShow = async (needShow) => {
+    const versionRes: Record<string, any> = await Taro.cloud.callFunction({
+      name: 'setVideoShow',
+      data: { needShow },
+    });
+  };
+
   onLoad = () => {
     const { miniProgram } = Taro.getAccountInfoSync();
     const version = miniProgram.version;
-    console.log('%c zjs version:', 'color: #0e93e0;background: #aaefe5;', version);
+    this.setState({ version });
   };
 
   onShareAppMessage() {
@@ -68,11 +93,17 @@ export default class Index extends React.Component<{}, MyState> {
   }
 
   render() {
-    const { list } = this.state;
+    const { list, version } = this.state;
     return (
       <View className={styles.pageCon}>
         <View className={styles.logo}>
-          <Image src={logoImg} className={styles.img} mode='widthFix' />
+          <Image
+            id='test'
+            src={logoImg}
+            ref={(ref) => (this.imgRef = ref)}
+            className={styles.img}
+            mode='widthFix'
+          />
         </View>
         <View className={styles.listCon}>
           {list.map((item, index) => (
@@ -89,6 +120,12 @@ export default class Index extends React.Component<{}, MyState> {
               </View>
             </Navigator>
           ))}
+        </View>
+        <View className={styles.footer}>
+          <Text className={styles.version}>版本：{version}</Text>
+          <Button open-type='contact' size='mini' className={styles.serviceBtn}>
+            联系客服
+          </Button>
         </View>
       </View>
     );

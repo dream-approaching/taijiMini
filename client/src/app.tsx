@@ -10,6 +10,7 @@ class App extends Component {
       Taro.cloud.init();
       // const openId = await this.getOpenid();
       await this.getUserInfo();
+      this.getVideoShow();
     }
   }
 
@@ -69,6 +70,15 @@ class App extends Component {
       });
     }
     return userInStorage;
+  };
+
+  getVideoShow = async () => {
+    try {
+      const res: Record<string, any> = await Taro.cloud.callFunction({ name: 'getVideoShow' });
+      Taro.setStorageSync('dbShowConfig', res.result.data);
+    } catch (error) {
+      console.log('%c zjs error:', 'color: #0e93e0;background: #aaefe5;', error);
+    }
   };
 
   // this.props.children 是将要会渲染的页面
