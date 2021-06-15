@@ -60,8 +60,6 @@ export default class Index extends React.Component<{}, MyState> {
   imgRef = null;
 
   async componentDidMount() {
-    this.setVideoShow(false);
-
     // 连续点击15下 在本地缓存设置 showVideo 为true
     muchclickEvent(15, this.imgRef, () => {
       const showVideo = Taro.getStorageSync('showVideo');
