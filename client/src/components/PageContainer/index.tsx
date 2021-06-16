@@ -16,11 +16,15 @@ interface PropsType {
 interface MyState {
   currentTab: number;
   showData: boolean;
+  globalHide: boolean;
+  videoShow: boolean;
 }
 export default class extends React.Component<PropsType, MyState> {
   state: MyState = {
     currentTab: 0,
     showData: false,
+    globalHide: false,
+    videoShow: false,
   };
 
   userInfo: any = null;
@@ -30,7 +34,21 @@ export default class extends React.Component<PropsType, MyState> {
   }
   async componentDidMount() {
     this.setState({ showData: Taro.getStorageSync('userInfo') });
+    await this.getVideoShow();
   }
+
+  getVideoShow = async () => {
+    try {
+      const res: Record<string, any> = await Taro.cloud.callFunction({ name: 'getVideoShow' });
+      const { globalHide, videoShow } = res.result.data;
+      this.setState({
+        globalHide,
+        videoShow,
+      });
+    } catch (error) {
+      console.log('%c zjs error:', 'color: #0e93e0;background: #aaefe5;', error);
+    }
+  };
 
   handlePreviewImg = (currentImg) => {
     const { imgList } = this.props;
@@ -56,11 +74,10 @@ export default class extends React.Component<PropsType, MyState> {
   };
 
   render() {
-    const { currentTab, showData } = this.state;
+    const { currentTab, showData, globalHide, videoShow } = this.state;
     const { imgList, videoList, children } = this.props;
     const tabList = [{ title: '图文描述' }, { title: '视频描述' }];
     const localShow = Taro.getStorageSync('showVideo'); // 本地缓存是否允许显示
-    const { globalHide, videoShow } = Taro.getStorageSync('dbShowConfig'); // 数据库是否允许显示
     // 审核时候 videoShow 需要改成 false，此时如果缓存中 showVideo 为 true 时也是会显示的
     // globalHide 值一般不做修改，除非特殊情况，比如被举报了，改为 true 时，视频全部隐藏
     const showVideo = !globalHide && (localShow || videoShow);

@@ -11,6 +11,7 @@ class App extends Component {
       Taro.cloud.init();
       const openId = await this.getOpenid();
       const userInfo = await this.getUserInfo();
+      this.checkUpdate();
       await wx.cloud.callFunction({
         name: 'setUsers',
         data: {
@@ -18,7 +19,6 @@ class App extends Component {
           updateObj: { lastLogin: dayjs().format('YYYY-MM-DD HH:mm:ss') },
         },
       });
-      this.getVideoShow();
     }
   }
 
@@ -29,6 +29,27 @@ class App extends Component {
   componentDidHide() {}
 
   componentDidCatchError() {}
+
+  checkUpdate = () => {
+    // 检查更新
+    const updateManager = Taro.getUpdateManager();
+    updateManager.onUpdateReady(function () {
+      Taro.showModal({
+        title: '更新提示',
+        content: '新版本已经准备好，是否重启应用？',
+        success: function (res) {
+          if (res.confirm) {
+            // 新的版本已经下载好，调用 applyUpdate 应用新版本并重启
+            updateManager.applyUpdate();
+          }
+        },
+      });
+    });
+    updateManager.onUpdateFailed(function (res) {
+      console.log('%cres326:', 'color: #0e93e0;background: #aaefe5;', res);
+      // 新的版本下载失败
+    });
+  };
 
   getCloudOpenid = async () => {
     const cloudFn = async () => {
@@ -78,15 +99,6 @@ class App extends Component {
       });
     }
     return userInStorage;
-  };
-
-  getVideoShow = async () => {
-    try {
-      const res: Record<string, any> = await Taro.cloud.callFunction({ name: 'getVideoShow' });
-      Taro.setStorageSync('dbShowConfig', res.result.data);
-    } catch (error) {
-      console.log('%c zjs error:', 'color: #0e93e0;background: #aaefe5;', error);
-    }
   };
 
   // this.props.children 是将要会渲染的页面
