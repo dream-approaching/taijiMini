@@ -84,9 +84,24 @@ export default class Index extends React.Component<{}, MyState> {
 
   onShareAppMessage() {
     return {
-      title: '刘师傅太极教学',
+      title: '陈式太极拳学习',
       path: '/pages/index/index',
-      imageUrl: 'http://storage.360buyimg.com/mtd/home/share1535013100318.jpg',
+      imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/54.jpg',
+    };
+  }
+
+  onShareTimeline() {
+    return {
+      title: '陈式太极拳学习',
+      path: '/pages/index/index',
+      imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/11.jpg',
+    };
+  }
+
+  onAddToFavorites() {
+    return {
+      title: '陈式太极拳学习',
+      imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/11.jpg',
     };
   }
 

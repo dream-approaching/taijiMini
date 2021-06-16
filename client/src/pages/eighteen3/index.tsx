@@ -66,11 +66,27 @@ export default class Index extends React.Component<{}, MyState> {
       ],
     };
   }
+
   onShareAppMessage() {
     return {
-      title: 'Taro UI',
-      path: '/pages/index/index',
-      imageUrl: 'http://storage.360buyimg.com/mtd/home/share1535013100318.jpg',
+      title: '陈式太极拳 八十三式',
+      path: '/pages/eighteen3/index',
+      imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/54.jpg',
+    };
+  }
+
+  onShareTimeline() {
+    return {
+      title: '陈式太极拳 八十三式',
+      path: '/pages/eighteen3/index',
+      imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/11.jpg',
+    };
+  }
+
+  onAddToFavorites() {
+    return {
+      title: '陈式太极拳 八十三式',
+      imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/11.jpg',
     };
   }
 

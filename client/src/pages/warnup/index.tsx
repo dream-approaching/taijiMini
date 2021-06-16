@@ -14,7 +14,13 @@ export default class ViewPage extends Component<{}, MyState> {
     videoList: [],
   };
 
+  tryTimes = 0;
+
   async componentDidMount() {
+    this.getData();
+  }
+
+  getData = async () => {
     try {
       Taro.showLoading({ title: '加载中' });
       const fileListRes: Record<string, any> = await Taro.cloud.callFunction({
@@ -35,10 +41,38 @@ export default class ViewPage extends Component<{}, MyState> {
       });
       Taro.hideLoading();
     } catch (error) {
-      Taro.hideLoading();
-      Taro.showToast({ title: '数据拉取失败，请重新进入页面', icon: 'none' });
-      console.log('%c zjs error:', 'color: #0e93e0;background: #aaefe5;', error);
+      if (this.tryTimes >= 5) {
+        Taro.hideLoading();
+        Taro.showToast({ title: '数据拉取失败，请重新进入页面', icon: 'none' });
+      } else {
+        console.log('%c zjs error:', 'color: #0e93e0;background: #aaefe5;', error);
+        this.tryTimes += 1;
+        this.getData();
+      }
     }
+  };
+
+  onShareAppMessage() {
+    return {
+      title: '热身运动',
+      path: '/pages/warnup/index',
+      imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/54.jpg',
+    };
+  }
+
+  onShareTimeline() {
+    return {
+      title: '热身运动',
+      path: '/pages/warnup/index',
+      imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/11.jpg',
+    };
+  }
+
+  onAddToFavorites() {
+    return {
+      title: '热身运动',
+      imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/11.jpg',
+    };
   }
 
   render() {

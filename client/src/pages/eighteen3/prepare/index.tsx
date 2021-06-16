@@ -5,6 +5,28 @@ import TimelineList from '@src/components/TimelineList';
 import PageContainer from '@src/components/PageContainer';
 
 export default class ViewPage extends Component {
+  onShareAppMessage() {
+    return {
+      title: '老架一路: 预备式',
+      path: '/pages/eighteen3/prepare/index',
+      imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/54.jpg',
+    };
+  }
+
+  onShareTimeline() {
+    return {
+      title: '老架一路: 预备式',
+      path: '/pages/eighteen3/prepare/index',
+      imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/11.jpg',
+    };
+  }
+
+  onAddToFavorites() {
+    return {
+      title: '老架一路: 预备式',
+      imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/11.jpg',
+    };
+  }
   render() {
     return (
       <PageContainer>

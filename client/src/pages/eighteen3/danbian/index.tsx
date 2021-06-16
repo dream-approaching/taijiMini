@@ -1,9 +1,29 @@
-import Taro from '@tarojs/taro';
+import Taro, { useShareAppMessage, useShareTimeline, useAddToFavorites } from '@tarojs/taro';
 import React from 'react';
 import { imageDataConfig, videoDataConfig } from './dataConfig';
 import CommonPage from '@src/components/CommonPage';
 
 export default () => {
+  useShareAppMessage(() => {
+    return {
+      title: '老架一路: 单鞭',
+      path: '/pages/eighteen3/danbian/index',
+      imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/54.jpg',
+    };
+  });
+  useShareTimeline(() => {
+    return {
+      title: '老架一路: 单鞭',
+      path: '/pages/eighteen3/danbian/index',
+      imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/11.jpg',
+    };
+  });
+  useAddToFavorites(() => {
+    return {
+      title: '老架一路: 单鞭',
+      imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/11.jpg',
+    };
+  });
   return (
     <CommonPage
       path='83/danbian'
