@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Taro from '@tarojs/taro';
+import dayjs from 'dayjs';
 import 'taro-ui/dist/style/index.scss';
 
 import './app.less';
@@ -8,8 +9,15 @@ class App extends Component {
   async componentDidMount() {
     if (process.env.TARO_ENV === 'weapp') {
       Taro.cloud.init();
-      // const openId = await this.getOpenid();
-      await this.getUserInfo();
+      const openId = await this.getOpenid();
+      const userInfo = await this.getUserInfo();
+      await wx.cloud.callFunction({
+        name: 'setUsers',
+        data: {
+          userInfo: { ...userInfo, openId },
+          updateObj: { lastLogin: dayjs().format('YYYY-MM-DD HH:mm:ss') },
+        },
+      });
       this.getVideoShow();
     }
   }
