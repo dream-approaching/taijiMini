@@ -32,6 +32,7 @@ exports.main = async (event, context) => {
             updateTime: dayjs().add(8, 'hours').format('YYYY-MM-DD HH:mm:ss'),
             lastLogin: dayjs().add(8, 'hours').format('YYYY-MM-DD HH:mm:ss'),
             left: 10, // 默认允许10次下载，否则弹出赞赏提示
+            times: 1,
             ...updateObj,
         }
         res = await users.add({
@@ -42,6 +43,7 @@ exports.main = async (event, context) => {
         const datas = {
             ...updateObj,
             ...userInfo,
+            times: _.inc(1),
             updateTime: dayjs().add(8, 'hours').format('YYYY-MM-DD HH:mm:ss'),
         }
 
