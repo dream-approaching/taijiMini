@@ -8,10 +8,9 @@ const db = cloud.database()
 const users = db.collection('users')
 
 const _ = db.command
-// 视频的状态
-const STATUS = { show: 1, hide: 2 }
 exports.main = async (event, context) => {
     const { userInfo, updateObj, type } = event
+    console.log('%c zjs userInfo:', 'color: #0e93e0;background: #aaefe5;', userInfo)
     let { OPENID = userInfo.openId, UNIONID } = await cloud.getWXContext()
     // 先查询用户是否存在
     const filterList = await users
@@ -23,7 +22,7 @@ exports.main = async (event, context) => {
     let res
     if (!filterList.data.length) {
         const newRecordData = {
-            ...userInfo.userInfo,
+            ...userInfo,
             cloudID: userInfo.cloudID,
             encryptedData: userInfo.encryptedData,
             signature: userInfo.signature,
@@ -42,6 +41,7 @@ exports.main = async (event, context) => {
         const record = filterList.data[0]
         const datas = {
             ...updateObj,
+            ...userInfo,
             updateTime: dayjs().add(8, 'hours').format('YYYY-MM-DD HH:mm:ss'),
         }
 
