@@ -26,7 +26,7 @@ export function muchclickEvent(much, dom, fn) {
   let count = 0;
   let lastTime = 0;
 
-  const handler = (event) => {
+  const handler = event => {
     const currentTime = new Date().getTime();
     count = currentTime - lastTime < 500 ? count + 1 : 0;
     lastTime = new Date().getTime();

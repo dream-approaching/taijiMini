@@ -27,33 +27,33 @@ export default class Index extends React.Component<{}, MyState> {
           id: 'warnup',
           title: '热身运动',
           content: '包含头部、关节、踢腿以及桩功等',
-          icon: iconBasic,
+          icon: iconBasic
         },
         {
           id: 'baduanjin',
           title: '八段锦',
           content: '健身气功八段锦',
-          icon: iconView,
+          icon: iconView
         },
         {
           id: 'bafawubu',
           title: '八法五步',
           content: '太极八法五步',
-          icon: iconAction,
+          icon: iconAction
         },
         {
           id: 'inside',
           title: '内功心法',
           content: '包含丹田的鼓荡、内旋以及胸腰折叠',
-          icon: iconForm,
+          icon: iconForm
         },
         {
           id: 'eighteen3',
           title: '八十三式',
           content: '陈式太极拳八十三式',
-          icon: iconLayout,
-        },
-      ],
+          icon: iconLayout
+        }
+      ]
     };
   }
 
@@ -69,10 +69,10 @@ export default class Index extends React.Component<{}, MyState> {
     });
   }
 
-  setVideoShow = async (needShow) => {
+  setVideoShow = async needShow => {
     const versionRes: Record<string, any> = await Taro.cloud.callFunction({
       name: 'setVideoShow',
-      data: { needShow },
+      data: { needShow }
     });
   };
 
@@ -86,7 +86,7 @@ export default class Index extends React.Component<{}, MyState> {
     return {
       title: '陈式太极拳学习',
       path: '/pages/index/index',
-      imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/54.jpg',
+      imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/54.jpg'
     };
   }
 
@@ -94,14 +94,14 @@ export default class Index extends React.Component<{}, MyState> {
     return {
       title: '陈式太极拳学习',
       path: '/pages/index/index',
-      imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/11.jpg',
+      imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/11.jpg'
     };
   }
 
   onAddToFavorites() {
     return {
       title: '陈式太极拳学习',
-      imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/11.jpg',
+      imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/11.jpg'
     };
   }
 
@@ -113,7 +113,7 @@ export default class Index extends React.Component<{}, MyState> {
           <Image
             id='test'
             src={logoImg}
-            ref={(ref) => (this.imgRef = ref)}
+            ref={ref => (this.imgRef = ref)}
             className={styles.img}
             mode='widthFix'
           />
@@ -137,7 +137,7 @@ export default class Index extends React.Component<{}, MyState> {
         <View className={styles.footer}>
           <Text className={styles.version}>版本：{version || '2.0.0'}</Text>
           <Button open-type='contact' size='mini' className={styles.serviceBtn}>
-            联系客服
+            联系客服21
           </Button>
         </View>
       </View>

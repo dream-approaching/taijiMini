@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Taro from '@tarojs/taro';
 import dayjs from 'dayjs';
-import 'taro-ui/dist/style/index.scss';
+// import "taro-ui/dist/style/index.scss";
 
 import './app.less';
 
@@ -16,8 +16,8 @@ class App extends Component {
         name: 'setUsers',
         data: {
           userInfo: { ...userInfo, openId },
-          updateObj: { lastLogin: dayjs().format('YYYY-MM-DD HH:mm:ss') },
-        },
+          updateObj: { lastLogin: dayjs().format('YYYY-MM-DD HH:mm:ss') }
+        }
       });
     }
   }
@@ -33,19 +33,19 @@ class App extends Component {
   checkUpdate = () => {
     // 检查更新
     const updateManager = Taro.getUpdateManager();
-    updateManager.onUpdateReady(function () {
+    updateManager.onUpdateReady(function() {
       Taro.showModal({
         title: '更新提示',
         content: '新版本已经准备好，是否重启应用？',
-        success: function (res) {
+        success: function(res) {
           if (res.confirm) {
             // 新的版本已经下载好，调用 applyUpdate 应用新版本并重启
             updateManager.applyUpdate();
           }
-        },
+        }
       });
     });
-    updateManager.onUpdateFailed(function (res) {
+    updateManager.onUpdateFailed(function(res) {
       console.log('%cres326:', 'color: #0e93e0;background: #aaefe5;', res);
       // 新的版本下载失败
     });
@@ -53,7 +53,9 @@ class App extends Component {
 
   getCloudOpenid = async () => {
     const cloudFn = async () => {
-      const loginRes: Record<string, any> = await Taro.cloud.callFunction({ name: 'login' });
+      const loginRes: Record<string, any> = await Taro.cloud.callFunction({
+        name: 'login'
+      });
       return loginRes.result.openid;
     };
     return (this.openid = this.openid || (await cloudFn()));
@@ -76,11 +78,11 @@ class App extends Component {
         Taro.showModal({
           title: '授权提示',
           content: '需要获取您的基本信息，用于完善用户资料，请点击“确认”后按操作提示授权',
-          success: (res) => {
+          success: res => {
             if (res.confirm) {
               wx.getUserProfile({
                 desc: '用于完善用户资料',
-                success: (res) => {
+                success: res => {
                   Taro.setStorageSync('userInfo', res.userInfo);
                   callback && callback(res.userInfo);
                   resolve(res.userInfo);
@@ -88,13 +90,13 @@ class App extends Component {
                 fail: () => {
                   failFn();
                   reject(null);
-                },
+                }
               });
             } else if (res.cancel) {
               failFn();
               reject(null);
             }
-          },
+          }
         });
       });
     }

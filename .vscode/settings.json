@@ -47,7 +47,10 @@
         "titleBar.activeBackground": "#a68300",
         "titleBar.activeForeground": "#e7e7e7",
         "titleBar.inactiveBackground": "#a6830099",
-        "titleBar.inactiveForeground": "#e7e7e799"
+        "titleBar.inactiveForeground": "#e7e7e799",
+        "sash.hoverBorder": "#d9ab00",
+        "statusBarItem.remoteBackground": "#a68300",
+        "statusBarItem.remoteForeground": "#e7e7e7"
     },
     "peacock.color": "#A68300",
     "git.ignoreLimitWarning": true,
