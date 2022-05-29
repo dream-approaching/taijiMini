@@ -23,7 +23,7 @@
     "allowJs": true,
     "resolveJsonModule": true,
     "typeRoots": ["node_modules/@types", "global.d.ts"],
-    "types": ["miniprogram-api-typings"]
+    "types": ["miniprogram-api-typings", "node"]
   },
   "exclude": ["node_modules", "dist"],
   "include": ["./src", "global.d.ts"],
