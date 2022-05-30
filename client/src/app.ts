@@ -7,6 +7,9 @@ import './app.less';
 
 class App extends Component {
   async componentDidMount() {
+    wx.globalData = {
+      videoSpeed: 1,
+    };
     if (process.env.TARO_ENV === 'weapp') {
       Taro.cloud.init();
       const openId = await this.getOpenid();

@@ -1,7 +1,7 @@
 import Taro from '@tarojs/taro';
 import React, { Fragment } from 'react';
-import { AtTabs, AtTabsPane, AtButton } from 'taro-ui';
-import { View, Image, Text, ScrollView } from '@tarojs/components';
+import { AtTabs, AtTabsPane, AtButton, AtFab } from 'taro-ui';
+import { View, Image, Text, ScrollView, Picker } from '@tarojs/components';
 import CommonVideo from '@src/components/CommonVideo';
 import { getFileCloudId } from '@src/utils';
 import styles from './index.module.less';
@@ -18,6 +18,8 @@ interface MyState {
   showData: boolean;
   globalHide: boolean;
   videoShow: boolean;
+  speedArr: number[];
+  selectorSpeed?: number;
 }
 export default class extends React.Component<PropsType, MyState> {
   state: MyState = {
@@ -25,6 +27,8 @@ export default class extends React.Component<PropsType, MyState> {
     showData: false,
     globalHide: false,
     videoShow: false,
+    speedArr: [0.5, 0.8, 1.0, 1.25, 1.5],
+    selectorSpeed: 1.0,
   };
 
   userInfo: any = null;
@@ -36,6 +40,12 @@ export default class extends React.Component<PropsType, MyState> {
     this.setState({ showData: Taro.getStorageSync('userInfo') });
     await this.getVideoShow();
   }
+
+  onChangeSpeed = (e) => {
+    this.setState({
+      selectorSpeed: this.state.speedArr[e.detail.value],
+    });
+  };
 
   getVideoShow = async () => {
     try {
@@ -74,7 +84,7 @@ export default class extends React.Component<PropsType, MyState> {
   };
 
   render() {
-    const { currentTab, showData, globalHide, videoShow } = this.state;
+    const { currentTab, showData, globalHide, videoShow, speedArr, selectorSpeed } = this.state;
     const { imgList, videoList, children } = this.props;
     const tabList = [{ title: '图文描述' }, { title: '视频描述' }];
     const localShow = Taro.getStorageSync('showVideo'); // 本地缓存是否允许显示
@@ -124,12 +134,25 @@ export default class extends React.Component<PropsType, MyState> {
                 className={`${styles.orderList} ${!showVideo ? 'withoutTop' : ''}`}
                 lowerThreshold={200}
               >
+                <Picker
+                  mode='selector'
+                  className={styles.pickerClass}
+                  range={speedArr}
+                  onChange={this.onChangeSpeed}
+                >
+                  <AtFab className={styles.text}>
+                    倍速 <br />
+                    {selectorSpeed}x
+                  </AtFab>
+                </Picker>
                 {(children && children[1]) || (
                   <Fragment>
                     {videoList?.map((item) => {
                       return (
                         <View className={styles.videoCon} key={item.ETag}>
                           <CommonVideo
+                            speed={selectorSpeed}
+                            eTag={item.ETag}
                             title={item.title}
                             shotInfo={item.shotInfo}
                             src={getFileCloudId(item.Key)}
