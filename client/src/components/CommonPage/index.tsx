@@ -53,14 +53,16 @@ export default class extends React.Component<MyProps, MyState> {
         }
         if (format === 'mp4') {
           const type = getVideoType(item.Key);
-          if (!videoCustom) {
+          console.log('%c zjs videoCustom:', 'color: #fff;background: #b457ff;', videoCustom);
+          if (videoCustom) {
+            const [paths, name] = keyPath.split('/');
+            console.log('%c zjs keyPath:', 'color: #fff;background: #b457ff;', keyPath);
+            videoList.push({ ...item, ...videoDataConfig[name] });
+          } else {
             videoList[videoType[type].index] = {
               ...item,
               ...videoDataConfig[videoType[type].name],
             };
-          } else {
-            const [paths, name] = keyPath.split('/');
-            videoList.push({ ...item, ...videoDataConfig[name] });
           }
         }
       });
