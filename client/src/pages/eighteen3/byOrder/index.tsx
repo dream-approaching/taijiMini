@@ -1,7 +1,7 @@
 import React from 'react';
 import Taro from '@tarojs/taro';
 import { AtIcon } from 'taro-ui';
-import { View, Navigator } from '@tarojs/components';
+import { View, Navigator, Text } from '@tarojs/components';
 import styles from '../index.module.less';
 
 interface MyState {
@@ -14,54 +14,72 @@ export default class Index extends React.Component<{}, MyState> {
     this.state = {
       list: [
         {
-          id: 'prepare',
+          id: '01-prepare',
           title: '预备式',
-          content: '预备式也为第 1 式。',
         },
         {
-          id: 'jingangdaodui2',
-          title: '第二金刚捣碓',
-          content: '全套共有 4 个金刚捣碓。 此为第 6 式',
-        },
-        {
-          id: 'jingangdaodui3',
-          title: '第三金刚捣碓',
-          content: '全套共有 4 个金刚捣碓。 此为第 16 式',
-        },
-        {
-          id: 'lanzhayi',
+          id: '03-lanzhayi',
           title: '懒扎衣',
-          content: '全套共有 2 个懒扎衣。 分别于第3、55 式',
         },
         {
-          id: 'liufengsibi',
+          id: '04-liufengsibi',
           title: '六封四闭',
-          content: '全套共有 7 个六封四闭。 分别于第4、29、47、51、56、67、76 式',
         },
         {
-          id: 'danbian',
+          id: '05-danbian',
           title: '单鞭',
-          content: '全套共有 7 个单鞭。 分别于第5、30、48、52、57、70、77 式',
         },
         {
-          id: 'baiheliangchi',
+          id: '06-jingangdaodui2',
+          title: '第二金刚捣碓',
+        },
+        {
+          id: '07-10-baiheliangchi',
           title: '白鹤亮翅 斜行 初收 前蹚拗步',
-          content: '白鹤亮翅 斜行 初收 前蹚拗步',
         },
         {
-          id: 'xiexing2',
+          id: '11-15-xiexing2',
           title: '第二斜行 再收 前蹚拗步 掩手肱捶 十字手',
-          content: '与前面三式相似，只有衔接动作有些不同',
         },
         {
-          id: 'zhongpan',
+          id: '16-jingangdaodui3',
+          title: '第三金刚捣碓',
+        },
+        {
+          id: '24-zhongpan',
           title: '中盘',
-          content: '全套共有 2 个中盘。 分别于第24、64 式',
         },
         {
-          id: 'shantongbei',
+          id: '27-shantongbei',
           title: '闪通背',
-          content: '全套共有 2 个闪通背。 分别于第27、67 式',
+        },
+        {
+          id: '30-danbian',
+          title: '单鞭',
+        },
+        {
+          id: '48-danbian',
+          title: '单鞭',
+        },
+        {
+          id: '52-danbian',
+          title: '单鞭',
+        },
+        {
+          id: '57-danbian',
+          title: '单鞭',
+        },
+        {
+          id: '70-danbian',
+          title: '单鞭',
+        },
+        {
+          id: '77-danbian',
+          title: '单鞭',
+        },
+        {
+          id: '67-shantongbei',
+          title: '闪通背',
         },
       ],
     };
@@ -95,21 +113,28 @@ export default class Index extends React.Component<{}, MyState> {
     return (
       <View className={styles.pageCon}>
         <View className={styles.listCon}>
-          {list.map((item, index) => (
-            <Navigator
-              className={styles.listItem}
-              key={index}
-              url={`/pages/eighteen3/byOrder/${item.id}/index`}
-            >
-              <View className={styles.itemInfo}>
-                <View className={styles.title}>{item.title}</View>
-                <View className={styles.content}>{item.content}</View>
-              </View>
-              <View className={styles.itemArrow}>
-                <AtIcon value='chevron-right' />
-              </View>
-            </Navigator>
-          ))}
+          {list.map((item, index) => {
+            const arr = item.id.split('-');
+            console.log('%c zjs arr:', 'color: #fff;background: #b457ff;', arr);
+            const titleIndex = arr.length > 2 ? `${arr[0]}-${arr[1]}` : arr[0];
+            return (
+              <Navigator
+                className={styles.listItem}
+                key={index}
+                url={`/pages/eighteen3/byOrder/${item.id}/index`}
+              >
+                <View className={styles.itemInfo}>
+                  <View className={styles.title}>
+                    <Text className={styles.title}>第{titleIndex}式</Text>
+                    <Text className={styles.contentOrder}>{item.title}</Text>
+                  </View>
+                </View>
+                <View className={styles.itemArrow}>
+                  <AtIcon value='chevron-right' />
+                </View>
+              </Navigator>
+            );
+          })}
         </View>
       </View>
     );
