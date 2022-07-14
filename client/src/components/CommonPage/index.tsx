@@ -14,6 +14,7 @@ interface MyProps {
   imageDataConfig: object;
   videoDataConfig: object;
   videoCustom?: boolean;
+  render?: any;
 }
 export default class extends React.Component<MyProps, MyState> {
   state: MyState = {
@@ -85,6 +86,10 @@ export default class extends React.Component<MyProps, MyState> {
 
   render() {
     const { imgList, videoList } = this.state;
+    const { render } = this.props;
+    if (render) {
+      return <div> {render({ imgList, videoList })}</div>;
+    }
     return <PageContainer imgList={imgList} videoList={videoList} />;
   }
 }

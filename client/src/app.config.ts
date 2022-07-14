@@ -2,8 +2,14 @@ export default {
   pages: [
     'pages/index/index',
     'pages/warnup/index',
+
     'pages/baduanjin/index',
+    'pages/baduanjin/main/index',
+    'pages/baduanjin/0104/index',
+    'pages/baduanjin/0508/index',
+
     'pages/inside/index',
+
     'pages/bafawubu/index',
     'pages/bafawubu/main/index',
     'pages/bafawubu/0117/index',
