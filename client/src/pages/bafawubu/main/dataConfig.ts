@@ -152,34 +152,4 @@ export const videoDataConfig = {
     shotInfo: '2020年06月12日 深圳市',
     index: 1,
   },
-  video01: {
-    title: '1势~17势',
-    shotInfo: '2020年06月02日 深圳市',
-    index: 2,
-  },
-  video02: {
-    title: '18势-19势',
-    shotInfo: '2020年06月03日 深圳市',
-    index: 3,
-  },
-  video03: {
-    title: '20势-23势',
-    shotInfo: '2020年06月04日 深圳市',
-    index: 4,
-  },
-  video04: {
-    title: '24势-25势',
-    shotInfo: '2020年06月05日 深圳市',
-    index: 5,
-  },
-  video05: {
-    title: '26势-29势',
-    shotInfo: '2020年06月06日 深圳市',
-    index: 6,
-  },
-  video06: {
-    title: '30势-32势',
-    shotInfo: '2020年06月07日 深圳市',
-    index: 7,
-  },
 };

@@ -13,15 +13,7 @@ class App extends Component {
     if (process.env.TARO_ENV === 'weapp') {
       Taro.cloud.init();
       const openId = await this.getOpenid();
-      const userInfo = await this.getUserInfo();
       this.checkUpdate();
-      await wx.cloud.callFunction({
-        name: 'setUsers',
-        data: {
-          userInfo: { ...userInfo, openId },
-          updateObj: { lastLogin: dayjs().format('YYYY-MM-DD HH:mm:ss') },
-        },
-      });
     }
   }
 
@@ -69,41 +61,6 @@ class App extends Component {
     (this.openid = this.openid || Taro.getStorageSync('openid')) ||
       Taro.setStorageSync('openid', await this.getCloudOpenid());
     return this.openid;
-  };
-
-  getUserInfo = async (callback?) => {
-    const userInStorage = Taro.getStorageSync('userInfo');
-    const failFn = () => {
-      wx.showToast({ title: '获取信息失败', icon: 'error' });
-    };
-    if (!userInStorage) {
-      return new Promise((resolve, reject) => {
-        Taro.showModal({
-          title: '授权提示',
-          content: '需要获取您的基本信息，用于完善用户资料，请点击“确认”后按操作提示授权',
-          success: (res) => {
-            if (res.confirm) {
-              wx.getUserProfile({
-                desc: '用于完善用户资料',
-                success: (res) => {
-                  Taro.setStorageSync('userInfo', res.userInfo);
-                  callback && callback(res.userInfo);
-                  resolve(res.userInfo);
-                },
-                fail: () => {
-                  failFn();
-                  reject(null);
-                },
-              });
-            } else if (res.cancel) {
-              failFn();
-              reject(null);
-            }
-          },
-        });
-      });
-    }
-    return userInStorage;
   };
 
   // this.props.children 是将要会渲染的页面
