@@ -62,7 +62,7 @@ export default class Index extends React.Component<{}, MyState> {
             <Navigator
               className={styles.listItem}
               key={index}
-              url={`/pages/bafawubu/${item.id}/index`}
+              url={`/pages/baduanjin/${item.id}/index`}
             >
               <View className={styles.itemInfo}>
                 <View className={styles.title}>{item.title}</View>
