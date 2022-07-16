@@ -98,8 +98,11 @@ export default class extends React.Component<PropsType, MyState> {
                   {imgList?.map((item) => {
                     return (
                       <View key={item.ETag}>
-                        <View className={styles.imgTitle}>
-                          <Text className={styles.titleText}>{item.desc}</Text>
+                        <View className={styles.imgBlock}>
+                          <Text className={styles.blockText}>{item.block}</Text>
+                        </View>
+                        <View className={styles.imgDesc}>
+                          <Text className={styles.descText}>{item.desc}</Text>
                         </View>
                         <Image
                           onClick={() => this.handlePreviewImg(getFileCloudId(item.Key))}

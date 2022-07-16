@@ -3,6 +3,7 @@ export class ImgItem {
   ETag: string;
   title?: string;
   desc?: string;
+  block?: string;
 }
 
 export class VideoItem {

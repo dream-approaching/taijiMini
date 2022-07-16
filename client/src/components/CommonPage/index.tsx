@@ -15,6 +15,7 @@ interface MyProps {
   videoDataConfig: object;
   videoCustom?: boolean;
   render?: any;
+  showImgIndex?: boolean;
 }
 export default class extends React.Component<MyProps, MyState> {
   state: MyState = {
@@ -29,7 +30,7 @@ export default class extends React.Component<MyProps, MyState> {
   }
 
   getData = async () => {
-    const { path, imageDataConfig, videoDataConfig, videoCustom } = this.props;
+    const { path, imageDataConfig, videoDataConfig, videoCustom, showImgIndex } = this.props;
     try {
       Taro.showLoading({ title: '加载中' });
       const fileListRes: Record<string, any> = await Taro.cloud.callFunction({
@@ -47,8 +48,8 @@ export default class extends React.Component<MyProps, MyState> {
               const index = keyArr.findIndex((keyItem) => item.Key === keyItem);
               imgList[index] = {
                 ...item,
-                desc: `${index + 1}、${imageDataConfig[item.Key].desc}`,
-                block: 
+                desc: `${showImgIndex ? `${index + 1}、` : ''}${imageDataConfig[item.Key].desc}`,
+                block: imageDataConfig[item.Key].block,
               };
             }
           });
