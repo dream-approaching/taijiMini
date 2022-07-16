@@ -2,21 +2,20 @@ import { videoType } from '@src/config/constants';
 
 export const imageDataConfig = {
   '83/danbian/104955.jpg': {
-    title:
-      '双顺缠，两手螺旋穿上去，左手中指领劲，与对方喉同高，右手小指在左手小臂内侧，右肘要掤起来',
+    desc: '双顺缠，两手螺旋穿上去，左手中指领劲，与对方喉同高，右手小指在左手小臂内侧，右肘要掤起来',
   },
-  '83/danbian/105000.jpg': { title: '胸向左转，旋腕擒拿压肘，肘和掌心相合' },
-  '83/danbian/105006.jpg': { title: '先走肘，再走手，腕跟肩同高，指尖斜朝后' },
-  '83/danbian/105010.jpg': { title: '胸向左转，眼往左看' },
-  '83/danbian/105016.jpg': { title: '边提边沉，肘膝相合' },
-  '83/danbian/105020.jpg': { title: '约偏后蹬出去' },
-  '83/danbian/105024.jpg': { title: '踏实松胯' },
+  '83/danbian/105000.jpg': { desc: '胸向左转，旋腕擒拿压肘，肘和掌心相合' },
+  '83/danbian/105006.jpg': { desc: '先走肘，再走手，腕跟肩同高，指尖斜朝后' },
+  '83/danbian/105010.jpg': { desc: '胸向左转，眼往左看' },
+  '83/danbian/105016.jpg': { desc: '边提边沉，肘膝相合' },
+  '83/danbian/105020.jpg': { desc: '约偏后蹬出去' },
+  '83/danbian/105024.jpg': { desc: '踏实松胯' },
   '83/danbian/105041.jpg': {
-    title: '重心前移，裆走下弧倒重心螺旋靠上去，肩胯同时靠，边靠边扣右脚尖',
+    desc: '重心前移，裆走下弧倒重心螺旋靠上去，肩胯同时靠，边靠边扣右脚尖',
   },
-  '83/danbian/105049.jpg': { title: '重心后移，穿掌坐腕在胸前' },
-  '83/danbian/105056.jpg': { title: '加掤劲，胸往左转，走肩走肘走手' },
-  '83/danbian/105106.jpg': { title: '下塌外捻，勾手掤圆，前弓后蹬' },
+  '83/danbian/105049.jpg': { desc: '重心后移，穿掌坐腕在胸前' },
+  '83/danbian/105056.jpg': { desc: '加掤劲，胸往左转，走肩走肘走手' },
+  '83/danbian/105106.jpg': { desc: '下塌外捻，勾手掤圆，前弓后蹬' },
 };
 
 export const videoDataConfig = {

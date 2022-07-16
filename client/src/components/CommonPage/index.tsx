@@ -47,7 +47,8 @@ export default class extends React.Component<MyProps, MyState> {
               const index = keyArr.findIndex((keyItem) => item.Key === keyItem);
               imgList[index] = {
                 ...item,
-                desc: `${index + 1}、${imageDataConfig[item.Key].title}`,
+                desc: `${index + 1}、${imageDataConfig[item.Key].desc}`,
+                block: 
               };
             }
           });
