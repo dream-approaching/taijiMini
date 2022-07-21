@@ -33,6 +33,12 @@
                     "pathName": "pages/baduanjin/index",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "八法五步",
+                    "pathName": "pages/bafawubu/index",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

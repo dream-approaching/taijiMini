@@ -21,26 +21,33 @@ export default class Index extends React.Component<{}, MyState> {
         {
           id: '0117',
           title: '第 01-17 势',
+          content:
+            '起势 左掤 右捋 左挤 双按 右採 左挒 左肘 右靠 右掤 左捋 右挤 双按 左採 右挒 右肘 左靠',
         },
         {
           id: '1819',
           title: '第 18-19 势',
+          content: '进步左右掤 退步左右捋',
         },
         {
           id: '2023',
           title: '第 20-23 势',
+          content: '左移步左挤 左移步双按 右移步右挤 右移步双按',
         },
         {
           id: '2425',
           title: '第 24-25 势',
+          content: '退步左右採 进步左右挒',
         },
         {
           id: '2629',
           title: '第 26-29 势',
+          content: '右移步右肘 右移步右靠 左移步左肘 左移步左靠',
         },
         {
           id: '3032',
           title: '第 30-32 势',
+          content: '中定左右独立 十字手 收势',
         },
       ],
     };
