@@ -7,7 +7,7 @@ export default class ViewPage extends Component {
   render() {
     return (
       <PageContainer>
-        <View>金刚捣碓</View>
+        <View>敬请期待</View>
         <View>暂无视频</View>
       </PageContainer>
     );
