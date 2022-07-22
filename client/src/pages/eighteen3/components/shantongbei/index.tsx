@@ -2,6 +2,7 @@ import Taro, { useShareAppMessage, useShareTimeline, useAddToFavorites } from '@
 import React from 'react';
 import { imageDataConfig, videoDataConfig } from './dataConfig';
 import CommonPage from '@src/components/CommonPage';
+import { videoAdId } from '../../index.config';
 
 export default () => {
   useShareAppMessage(() => {
@@ -29,6 +30,7 @@ export default () => {
       path='83/shantongbei'
       imageDataConfig={imageDataConfig}
       videoDataConfig={videoDataConfig}
+      videoAdId={videoAdId}
     />
   );
 };

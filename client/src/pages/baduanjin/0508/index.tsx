@@ -1,6 +1,7 @@
 import Taro, { useShareAppMessage, useShareTimeline, useAddToFavorites } from '@tarojs/taro';
 import React from 'react';
 import { imageDataConfig, videoDataConfig } from './dataConfig';
+import { videoAdId } from '../index.config';
 import CommonPage from '@src/components/CommonPage';
 
 export default () => {
@@ -30,6 +31,7 @@ export default () => {
       videoCustom
       imageDataConfig={imageDataConfig}
       videoDataConfig={videoDataConfig}
+      videoAdId={videoAdId}
     />
   );
 };

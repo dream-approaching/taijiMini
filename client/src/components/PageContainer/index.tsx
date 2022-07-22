@@ -12,6 +12,7 @@ interface PropsType {
   videoList?: Array<VideoItem>;
   imageDataConfig?: object;
   children?: any;
+  videoAdId?: string;
 }
 interface MyState {
   currentTab: number;
@@ -71,9 +72,8 @@ export default class extends React.Component<PropsType, MyState> {
 
   render() {
     const { currentTab, globalHide, videoShow, speedArr, selectorSpeed } = this.state;
-    const { imgList, videoList, children } = this.props;
-    console.log('%c zjs videoList:', 'color: #fff;background: #b457ff;', videoList);
-    console.log('%c zjs imgList:', 'color: #fff;background: #b457ff;', imgList);
+    const { imgList, videoList, children, videoAdId } = this.props;
+    console.log('%c zjs videoAdId:', 'color: #fff;background: #b457ff;', videoAdId);
     const tabList = [{ title: '图文描述' }, { title: '视频描述' }];
     const localShow = Taro.getStorageSync('showVideo'); // 本地缓存是否允许显示
     // 审核时候 videoShow 需要改成 false，此时如果缓存中 showVideo 为 true 时也是会显示的
@@ -146,6 +146,7 @@ export default class extends React.Component<PropsType, MyState> {
                           title={item.title}
                           shotInfo={item.shotInfo}
                           src={getFileCloudId(item.Key)}
+                          videoAdId={videoAdId}
                         />
                       </View>
                     );

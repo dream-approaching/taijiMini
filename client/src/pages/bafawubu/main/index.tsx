@@ -5,6 +5,7 @@ import CommonPage from '@src/components/CommonPage';
 import PageContainer from '@src/components/PageContainer';
 import { View, Text } from '@tarojs/components';
 import TimelineList from '@src/components/TimelineList';
+import { videoAdId } from '../index.config';
 
 export default () => {
   useShareAppMessage(() => {
@@ -35,7 +36,7 @@ export default () => {
       videoDataConfig={videoDataConfig}
       render={({ videoList }) => {
         return (
-          <PageContainer videoList={videoList}>
+          <PageContainer videoList={videoList} videoAdId={videoAdId}>
             <View>
               <View style={{ height: 20 }} />
               <TimelineList

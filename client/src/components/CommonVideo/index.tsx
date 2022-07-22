@@ -10,6 +10,7 @@ type MyProps = {
   shotInfo?: string;
   speed?: number;
   eTag: string;
+  videoAdId?: string;
 };
 
 export default class extends React.Component<MyProps, {}> {
@@ -31,7 +32,7 @@ export default class extends React.Component<MyProps, {}> {
   };
 
   render() {
-    const { src, title, shotInfo, eTag } = this.props;
+    const { src, title, shotInfo, eTag, videoAdId } = this.props;
 
     return (
       <Fragment>
@@ -47,6 +48,7 @@ export default class extends React.Component<MyProps, {}> {
             loop={false}
             muted={false}
             id={eTag}
+            adUnitId={videoAdId}
           />
           {shotInfo && (
             <View className={styles.videoBottomTip}>

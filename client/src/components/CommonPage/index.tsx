@@ -16,6 +16,7 @@ interface MyProps {
   videoCustom?: boolean;
   render?: any;
   showImgIndex?: boolean;
+  videoAdId?: string;
 }
 export default class extends React.Component<MyProps, MyState> {
   state: MyState = {
@@ -92,10 +93,10 @@ export default class extends React.Component<MyProps, MyState> {
 
   render() {
     const { imgList, videoList } = this.state;
-    const { render } = this.props;
+    const { render, videoAdId } = this.props;
     if (render) {
       return <div> {render({ imgList, videoList })}</div>;
     }
-    return <PageContainer imgList={imgList} videoList={videoList} />;
+    return <PageContainer imgList={imgList} videoList={videoList} videoAdId={videoAdId} />;
   }
 }

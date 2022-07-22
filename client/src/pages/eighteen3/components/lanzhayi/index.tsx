@@ -2,8 +2,10 @@ import Taro, { useShareAppMessage, useShareTimeline, useAddToFavorites } from '@
 import React from 'react';
 import { imageDataConfig, videoDataConfig } from './dataConfig';
 import CommonPage from '@src/components/CommonPage';
+import { videoAdId } from '../../index.config';
 
 export default () => {
+  console.log('%c zjs222 videoAdId:', 'color: #fff;background: #b457ff;', videoAdId);
   useShareAppMessage(() => {
     return {
       title: '老架一路: 懒扎衣',
@@ -29,6 +31,7 @@ export default () => {
       path='83/lanzhayi'
       imageDataConfig={imageDataConfig}
       videoDataConfig={videoDataConfig}
+      videoAdId={videoAdId}
     />
   );
 };
