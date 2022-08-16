@@ -50,7 +50,8 @@
         "titleBar.inactiveForeground": "#e7e7e799",
         "sash.hoverBorder": "#c90036",
         "statusBarItem.remoteBackground": "#960028",
-        "statusBarItem.remoteForeground": "#e7e7e7"
+        "statusBarItem.remoteForeground": "#e7e7e7",
+        "commandCenter.border": "#e7e7e799"
     },
     "peacock.color": "#960028",
     "git.ignoreLimitWarning": true,

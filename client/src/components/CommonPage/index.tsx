@@ -4,6 +4,7 @@ import { getVideoType } from '@src/utils';
 import { videoType } from '@src/config/constants';
 import PageContainer from '@src/components/PageContainer';
 import { ImgItem, VideoItem } from '@src/config/common';
+import { View, Text } from '@tarojs/components';
 
 interface MyState {
   imgList: Array<ImgItem>;
@@ -95,7 +96,7 @@ export default class extends React.Component<MyProps, MyState> {
     const { imgList, videoList } = this.state;
     const { render, videoAdId } = this.props;
     if (render) {
-      return <div> {render({ imgList, videoList })}</div>;
+      return <View> {render({ imgList, videoList })}</View>;
     }
     return <PageContainer imgList={imgList} videoList={videoList} videoAdId={videoAdId} />;
   }

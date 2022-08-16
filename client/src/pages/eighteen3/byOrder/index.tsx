@@ -18,6 +18,10 @@ export default class Index extends React.Component<{}, MyState> {
           title: '预备式',
         },
         {
+          id: '02-jingangdaodui',
+          title: '金刚捣碓',
+        },
+        {
           id: '03-lanzhayi',
           title: '懒扎衣',
         },
@@ -44,6 +48,34 @@ export default class Index extends React.Component<{}, MyState> {
         {
           id: '16-jingangdaodui3',
           title: '第三金刚捣碓',
+        },
+        {
+          id: '17-bishenchui',
+          title: '庇身捶(含背折靠)',
+        },
+        {
+          id: '18-qinglongchushui',
+          title: '青龙出水',
+        },
+        {
+          id: '19-shuangtuizhang',
+          title: '双推掌',
+        },
+        {
+          id: '20-sanhuanzhang',
+          title: '三换掌',
+        },
+        {
+          id: '21-zhoudichui',
+          title: '肘底捶',
+        },
+        {
+          id: '22-daojuanhong',
+          title: '倒卷肱',
+        },
+        {
+          id: '23-tuibuyazhou',
+          title: '退步压肘',
         },
         {
           id: '24-zhongpan',
