@@ -41,6 +41,7 @@ export default class extends React.Component<MyProps, MyState> {
       });
       const imgList: Array<ImgItem> = [];
       const videoList: Array<VideoItem> = [];
+      console.log('%c zjs fileListRes:', 'color: #fff;background: #b457ff;', fileListRes);
       fileListRes.result.fileList.forEach((item: ImgItem) => {
         const [keyPath, format] = item.Key.split('.');
         if (format === 'png' || format === 'jpg') {

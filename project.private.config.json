@@ -1,46 +1,37 @@
 {
-    "projectname": "TaijiMini",
-    "setting": {
-        "compileHotReLoad": true
-    },
-    "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
-    "condition": {
-        "plugin": {
-            "list": []
+  "projectname": "TaijiMini",
+  "setting": {
+    "compileHotReLoad": true
+  },
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/eighteen3/baiheliangchi/index",
+          "pathName": "pages/eighteen3/baiheliangchi/index",
+          "query": "",
+          "scene": null
         },
-        "game": {
-            "list": []
+        {
+          "name": "83",
+          "pathName": "pages/eighteen3/index",
+          "query": "",
+          "scene": null
         },
-        "gamePlugin": {
-            "list": []
+        {
+          "name": "八段锦",
+          "pathName": "pages/baduanjin/index",
+          "query": "",
+          "scene": null
         },
-        "miniprogram": {
-            "list": [
-                {
-                    "name": "pages/eighteen3/baiheliangchi/index",
-                    "pathName": "pages/eighteen3/baiheliangchi/index",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "83",
-                    "pathName": "pages/eighteen3/index",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "八段锦",
-                    "pathName": "pages/baduanjin/index",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "八法五步",
-                    "pathName": "pages/bafawubu/index",
-                    "query": "",
-                    "scene": null
-                }
-            ]
+        {
+          "name": "八法五步",
+          "pathName": "pages/bafawubu/index",
+          "query": "",
+          "scene": null
         }
+      ]
     }
+  }
 }
