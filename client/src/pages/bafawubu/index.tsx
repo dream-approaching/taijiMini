@@ -1,7 +1,7 @@
 import React from 'react';
 import Taro from '@tarojs/taro';
 import { AtIcon } from 'taro-ui';
-import { View, Navigator } from '@tarojs/components';
+import { View, Navigator, Ad, AdCustom } from '@tarojs/components';
 import styles from './index.module.less';
 
 interface MyState {
@@ -96,6 +96,12 @@ export default class Index extends React.Component<{}, MyState> {
               </View>
             </Navigator>
           ))}
+        </View>
+        <View className={styles.adCon}>
+          <Ad unitId='adunit-2090863cf2e43f4c'></Ad>
+        </View>
+        <View className='floatAd'>
+          <AdCustom unitId='adunit-77d5696732c26384'></AdCustom>
         </View>
       </View>
     );

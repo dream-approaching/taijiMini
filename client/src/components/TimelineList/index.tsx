@@ -16,7 +16,7 @@ export default class TimelineList extends Component<MyProps, {}> {
     const { title, items } = this.props;
     return (
       <View className={styles.timelineCon}>
-        {title && <CommonTitle title={title} />}
+        {title && <CommonTitle title={title} level={1} />}
         <AtTimeline className={styles.timeline} items={items} />
       </View>
     );
