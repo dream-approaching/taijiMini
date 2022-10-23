@@ -7,27 +7,27 @@ import { videoAdId } from '../../index.config';
 export default () => {
   useShareAppMessage(() => {
     return {
-      title: '老架一路: 单鞭',
-      path: '/pages/eighteen3/danbian/index',
+      title: '老架一路: 金刚捣碓',
+      path: '/pages/eighteen3/jingangdaodui2/index',
       imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/54.jpg',
     };
   });
   useShareTimeline(() => {
     return {
-      title: '老架一路: 单鞭',
-      path: '/pages/eighteen3/danbian/index',
+      title: '老架一路: 金刚捣碓',
+      path: '/pages/eighteen3/jingangdaodui2/index',
       imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/11.jpg',
     };
   });
   useAddToFavorites(() => {
     return {
-      title: '老架一路: 单鞭',
+      title: '老架一路: 金刚捣碓',
       imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/11.jpg',
     };
   });
   return (
     <CommonPage
-      path='83/danbian'
+      path='83/jingangdaodui'
       imageDataConfig={imageDataConfig}
       videoDataConfig={videoDataConfig}
       videoAdId={videoAdId}

@@ -31,6 +31,7 @@ export default () => {
       imageDataConfig={imageDataConfig}
       videoDataConfig={videoDataConfig}
       videoAdId={videoAdId}
+      showImgIndex
     />
   );
 };

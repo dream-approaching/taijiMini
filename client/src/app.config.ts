@@ -101,6 +101,7 @@ export default {
     'pages/eighteen3/byAction/index',
     'pages/eighteen3/byAction/baiheliangchi/index',
     'pages/eighteen3/byAction/danbian/index',
+    'pages/eighteen3/byAction/jingangdaodui/index',
     'pages/eighteen3/byAction/jingangdaodui2/index',
     'pages/eighteen3/byAction/jingangdaodui3/index',
     'pages/eighteen3/byAction/lanzhayi/index',
