@@ -1,7 +1,7 @@
 import Taro from '@tarojs/taro';
 import React, { Fragment } from 'react';
 import { AtTabs, AtTabsPane, AtButton, AtFab } from 'taro-ui';
-import { View, Image, Text, ScrollView, Picker } from '@tarojs/components';
+import { View, Image, Text, ScrollView, Picker, Ad, AdCustom } from '@tarojs/components';
 import CommonVideo from '@src/components/CommonVideo';
 import { getFileCloudId } from '@src/utils';
 import styles from './index.module.less';
@@ -124,29 +124,34 @@ export default class extends React.Component<PropsType, MyState> {
                   })}
                 </View>
               )}
+              <View className={styles.imageAdCon}>
+                <Ad unitId='adunit-8c973cbe1d464104'></Ad>
+              </View>
+              <View className='floatAd'>
+                <AdCustom unitId='adunit-ac9a4cba4e559076'></AdCustom>
+              </View>
             </ScrollView>
           </AtTabsPane>
           <AtTabsPane current={currentTab} index={1}>
             <ScrollView
               scroll-y
-              className={`${styles.orderList} ${!showVideo ? 'withoutTop' : ''}`}
+              className={`${styles.orderList} ${!showVideo ? 'withoutTop' : ''} ${styles.videoTab}`}
               lowerThreshold={200}
             >
-              <Picker
-                mode='selector'
-                className={styles.pickerClass}
-                range={speedArr}
-                onChange={this.onChangeSpeed}
-              >
-                <AtFab className={styles.text}>
-                  倍速 <br />
-                  {selectorSpeed}x
-                </AtFab>
-              </Picker>
               {childrenTwo || (
                 <Fragment>
+                  <Picker
+                    mode='selector'
+                    className={styles.pickerClass}
+                    range={speedArr}
+                    onChange={this.onChangeSpeed}
+                  >
+                    <AtFab className={styles.text}>
+                      倍速 <br />
+                      {selectorSpeed}x
+                    </AtFab>
+                  </Picker>
                   {videoList?.map((item) => {
-                    console.log('%c zjs item:', 'color: #fff;background: #b457ff;', item);
                     return (
                       <View className={styles.videoCon} key={item.ETag}>
                         <CommonVideo
@@ -162,6 +167,9 @@ export default class extends React.Component<PropsType, MyState> {
                   })}
                 </Fragment>
               )}
+              <View className={styles.videoAdCon}>
+                <Ad unitId='adunit-3bf989f36403db0b' adType='video' adTheme='white'></Ad>
+              </View>
             </ScrollView>
           </AtTabsPane>
         </AtTabs>

@@ -55,7 +55,7 @@ export default () => {
           onClick={handlePreviewImg}
           mode='widthFix'
           lazyLoad
-          style={{ width: '100%' }}
+          style={{ width: '90%', marginLeft: '5%' }}
           src={getFileCloudId(imgKey)}
         />
       </View>

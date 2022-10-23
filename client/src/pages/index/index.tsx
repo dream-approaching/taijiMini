@@ -1,7 +1,7 @@
 import React from 'react';
 import Taro from '@tarojs/taro';
 import { AtIcon } from 'taro-ui';
-import { View, Image, Navigator, Text, Button } from '@tarojs/components';
+import { View, Image, Navigator, Text, Button, Ad, AdCustom } from '@tarojs/components';
 import logoImg from '@src/assets/images/logo.png';
 import iconBasic from '@src/assets/images/icon-list-basic.png';
 import iconView from '@src/assets/images/icon-list-view.png';
@@ -134,8 +134,14 @@ export default class Index extends React.Component<{}, MyState> {
             </Navigator>
           ))}
         </View>
+        <View className={styles.adCon}>
+          <Ad unitId='adunit-d704a0e43a61c45c'></Ad>
+        </View>
+        <View className='floatAd'>
+          <AdCustom unitId='adunit-968d3dcfb9a0a917'></AdCustom>
+        </View>
         <View className={styles.footer}>
-          <Text className={styles.version}>版本：{version || '2.0.0'}</Text>
+          <Text className={styles.version}>版本：{version || '2.0.1'}</Text>
           <Button open-type='contact' size='mini' className={styles.serviceBtn}>
             联系客服
           </Button>
