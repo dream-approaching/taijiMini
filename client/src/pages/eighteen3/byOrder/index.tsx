@@ -147,7 +147,6 @@ export default class Index extends React.Component<{}, MyState> {
         <View className={styles.listCon}>
           {list.map((item, index) => {
             const arr = item.id.split('-');
-            console.log('%c zjs arr:', 'color: #fff;background: #b457ff;', arr);
             const titleIndex = arr.length > 2 ? `${arr[0]}-${arr[1]}` : arr[0];
             return (
               <Navigator

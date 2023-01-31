@@ -45,7 +45,7 @@ export default class ViewPage extends Component<{}, MyState> {
         Taro.hideLoading();
         Taro.showToast({ title: '数据拉取失败，请重新进入页面', icon: 'none' });
       } else {
-        console.log('%c zjs error:', 'color: #0e93e0;background: #aaefe5;', error);
+        console.error('%c error:', 'color: #0e93e0;background: #aaefe5;', error);
         this.tryTimes += 1;
         this.getData();
       }

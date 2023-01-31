@@ -105,6 +105,12 @@ export default class Index extends React.Component<{}, MyState> {
     };
   }
 
+  handleAppreciate = () => {
+    Taro.previewImage({
+      urls: ['cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/like.jpg'],
+    });
+  };
+
   render() {
     const { list, version } = this.state;
     return (
@@ -141,8 +147,11 @@ export default class Index extends React.Component<{}, MyState> {
           <AdCustom unitId='adunit-968d3dcfb9a0a917'></AdCustom>
         </View>
         <View className={styles.footer}>
-          <Text className={styles.version}>版本：{version || '2.0.1'}</Text>
-          <Button open-type='contact' size='mini' className={styles.serviceBtn}>
+          <Text className={styles.footerBtn}>版本：{version || '2.0.1'}</Text>
+          <Button className={styles.footerBtn} onClick={this.handleAppreciate}>
+            赞赏
+          </Button>
+          <Button open-type='contact' className={styles.footerBtn}>
             联系客服
           </Button>
         </View>
