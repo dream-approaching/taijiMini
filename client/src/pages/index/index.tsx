@@ -8,6 +8,7 @@ import iconView from '@src/assets/images/icon-list-view.png';
 import iconAction from '@src/assets/images/icon-list-action.png';
 import iconForm from '@src/assets/images/icon-list-form.png';
 import iconLayout from '@src/assets/images/icon-list-layout.png';
+import iconHoc from '@src/assets/images/icon-list-hoc.png';
 import config from '@src/config';
 import styles from './index.module.less';
 import { muchclickEvent } from '@src/utils';
@@ -52,6 +53,12 @@ export default class Index extends React.Component<{}, MyState> {
           title: '八十三式',
           content: '陈式太极拳八十三式',
           icon: iconLayout,
+        },
+        {
+          id: 'aboutme',
+          title: '关于我',
+          content: '关于我',
+          icon: iconHoc,
         },
       ],
     };

@@ -110,6 +110,8 @@ export default {
     'pages/eighteen3/byAction/shantongbei/index',
     'pages/eighteen3/byAction/xiexing2/index',
     'pages/eighteen3/byAction/zhongpan/index',
+
+    'pages/aboutme/index',
   ],
   window: {
     backgroundTextStyle: 'light',

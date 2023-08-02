@@ -20,7 +20,7 @@
     "checkSiteMap": true,
     "uploadWithSourceMap": true,
     "compileHotReLoad": false,
-    "useMultiFrameRuntime": false,
+    "useMultiFrameRuntime": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -37,7 +37,9 @@
     "useCompilerPlugins": false,
     "ignoreUploadUnusedFiles": true,
     "useApiHook": false,
-    "useApiHostProcess": false
+    "useApiHostProcess": false,
+    "lazyloadPlaceholderEnable": false,
+    "useStaticServer": true
   },
   "compileType": "miniprogram",
   "simulatorType": "wechat",
