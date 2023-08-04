@@ -30,8 +30,7 @@ export default {
     'pages/eighteen3/byOrder/07-10-baiheliangchi/index',
     'pages/eighteen3/byOrder/11-15-xiexing2/index',
     'pages/eighteen3/byOrder/16-jingangdaodui3/index',
-    'pages/eighteen3/byOrder/17-bishenchui/index',
-    'pages/eighteen3/byOrder/18-qinglongchuishui/index',
+    'pages/eighteen3/byOrder/17-18-bishenchui/index',
     'pages/eighteen3/byOrder/19-shuangtuizhang/index',
     'pages/eighteen3/byOrder/20-sanhuanzhang/index',
     'pages/eighteen3/byOrder/21-zhoudichui/index',
@@ -110,6 +109,7 @@ export default {
     'pages/eighteen3/byAction/shantongbei/index',
     'pages/eighteen3/byAction/xiexing2/index',
     'pages/eighteen3/byAction/zhongpan/index',
+    'pages/eighteen3/byAction/bishenchui/index',
 
     'pages/aboutme/index',
   ],

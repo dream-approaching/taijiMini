@@ -50,12 +50,8 @@ export default class Index extends React.Component<{}, MyState> {
           title: '第三金刚捣碓',
         },
         {
-          id: '17-bishenchui',
-          title: '庇身捶(含背折靠)',
-        },
-        {
-          id: '18-qinglongchushui',
-          title: '青龙出水',
+          id: '17-18-bishenchui',
+          title: '庇身捶(含背折靠) 青龙出水',
         },
         {
           id: '19-shuangtuizhang',

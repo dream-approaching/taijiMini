@@ -59,6 +59,11 @@ export default class Index extends React.Component<{}, MyState> {
           content: '与前面三式相似，只有衔接动作有些不同',
         },
         {
+          id: 'bishenchui',
+          title: '庇身捶(含背折靠) 青龙出水',
+          content: '第17、18 式',
+        },
+        {
           id: 'zhongpan',
           title: '中盘',
           content: '全套共有 2 个中盘。 分别于第24、64 式',

@@ -1,0 +1,55 @@
+import { videoType } from '@src/config/constants';
+
+export const imageDataConfig = {
+  '83/bishenchui/194058.jpg': {
+    desc: '加一个掤劲走一个圆：右前左后',
+    block: '庇身捶 含背折靠',
+  },
+  '83/bishenchui/194123.jpg': { desc: '两手分开，虎口相对，与胯同高' },
+  '83/bishenchui/194129.jpg': { desc: '重心左移，收脚，两手往上走，在插步落下来，与胸同高' },
+  '83/bishenchui/194134.jpg': { desc: '走一个圆，胸腔左转，滚肘' },
+  '83/bishenchui/194139.jpg': { desc: '胸腔左转，两拳分开，拳眼朝上，拳心朝内' },
+  '83/bishenchui/194143.jpg': { desc: '胸腔右转，双逆缠，两手掤开，眼睛看左手前方' },
+  '83/bishenchui/194148.jpg': {
+    desc: '双顺缠，拳开肘合',
+  },
+  '83/bishenchui/194152.jpg': { desc: '拳合肘开，两拳相对' },
+  '83/bishenchui/194156.jpg': {
+    desc: '胸腔右转，螺旋下沉，重心偏左，右拳在右大腿外侧，左拳在胸前中线，，左肘和右膝相合',
+  },
+  '83/bishenchui/194158.jpg': { desc: '重心前移，双逆缠，右拳在右眼前方，左拳在右胸下方' },
+  '83/bishenchui/194201.jpg': { desc: '双顺缠，重心左移，右拳在胸前中线，左拳在腰间' },
+  '83/bishenchui/194206.jpg': {
+    desc: '重心右移，扣左脚，双逆缠，胸腔右转，眼睛看左肘前方，右拳在右眼前方约30公分',
+  },
+  '83/bishenchui/194213.jpg': {
+    desc: '胸腔右转，右拳回拉，左拳从腰间冲上去，与胸同高',
+    block: '青龙出水',
+  },
+  '83/bishenchui/194218.jpg': { desc: '双逆缠，右拳在右眼前方，左拳拳面朝下，在两膝中间' },
+  '83/bishenchui/194222.jpg': {
+    desc: '双逆缠开，再双顺缠合，撩掌，右拳在左小臂上方，拳心朝下，左掌虎口朝上，指尖朝前',
+  },
+  '83/bishenchui/194227.jpg': {
+    desc: '拳掌相合，右拳下沉，上步，搓步，开左胸，侧崩拳。右拳拳心朝下，左手半握拳在左腹前',
+  },
+};
+
+export const videoDataConfig = {
+  [videoType.attack.name]: {
+    title: '攻防含义',
+    shotInfo: '吴少华 2019年11月 娄底市',
+  },
+  [videoType.detail.name]: {
+    title: '动作要领',
+    shotInfo: '吴少华 2019年11月 娄底市',
+  },
+  [videoType.number.name]: {
+    title: '分解动作',
+    shotInfo: '吴少华 2019年11月 娄底市',
+  },
+  [videoType.normal.name]: {
+    title: '正常',
+    shotInfo: '吴少华 2019年11月 娄底市',
+  },
+};
