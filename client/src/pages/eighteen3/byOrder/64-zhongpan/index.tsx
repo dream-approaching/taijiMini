@@ -1,15 +1,7 @@
 import Taro from '@tarojs/taro';
-import React, { Component } from 'react';
-import { View } from '@tarojs/components';
-import PageContainer from '@src/components/PageContainer';
+import React from 'react';
+import ZhongPan from '../../components/zhongpan';
 
-export default class ViewPage extends Component {
-  render() {
-    return (
-      <PageContainer>
-        <View>敬请期待</View>
-        <View>暂无视频</View>
-      </PageContainer>
-    );
-  }
-}
+export default () => {
+  return <ZhongPan />;
+};

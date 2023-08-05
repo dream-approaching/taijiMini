@@ -7,27 +7,27 @@ import { videoAdId } from '../../index.config';
 export default () => {
   useShareAppMessage(() => {
     return {
-      title: '老架一路: 庇身锤 青龙出水',
-      path: '/pages/eighteen3/17-18-bishenchui/index',
+      title: '老架一路: 倒卷肱 退步压肘',
+      path: '/pages/eighteen3/22-23-daojuangong/index',
       imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/54.jpg',
     };
   });
   useShareTimeline(() => {
     return {
-      title: '老架一路: 庇身锤 青龙出水',
-      path: '/pages/eighteen3/17-18-bishenchui/index',
+      title: '老架一路: 倒卷肱 退步压肘',
+      path: '/pages/eighteen3/22-23-daojuangong/index',
       imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/11.jpg',
     };
   });
   useAddToFavorites(() => {
     return {
-      title: '老架一路: 庇身锤 青龙出水',
+      title: '老架一路: 倒卷肱 退步压肘',
       imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/11.jpg',
     };
   });
   return (
     <CommonPage
-      path='83/bishenchui'
+      path='83/daojuangong'
       imageDataConfig={imageDataConfig}
       videoDataConfig={videoDataConfig}
       videoAdId={videoAdId}

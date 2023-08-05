@@ -54,24 +54,12 @@ export default class Index extends React.Component<{}, MyState> {
           title: '庇身捶(含背折靠) 青龙出水',
         },
         {
-          id: '19-shuangtuizhang',
-          title: '双推掌',
+          id: '19-21-shuangtuizhang',
+          title: '双推掌 三换掌 肘底捶',
         },
         {
-          id: '20-sanhuanzhang',
-          title: '三换掌',
-        },
-        {
-          id: '21-zhoudichui',
-          title: '肘底捶',
-        },
-        {
-          id: '22-daojuanhong',
-          title: '倒卷肱',
-        },
-        {
-          id: '23-tuibuyazhou',
-          title: '退步压肘',
+          id: '22-23-daojuangong',
+          title: '倒卷肱 退步压肘',
         },
         {
           id: '24-zhongpan',

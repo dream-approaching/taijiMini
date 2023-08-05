@@ -64,6 +64,16 @@ export default class Index extends React.Component<{}, MyState> {
           content: '第17、18 式',
         },
         {
+          id: 'shuangtuizhang',
+          title: '双推掌 三换掌 肘底锤',
+          content: '第19、20、21 式',
+        },
+        {
+          id: 'daojuangong',
+          title: '倒卷肱 退步压肘',
+          content: '全套共有 2 处。分别于22、23式和62、63式',
+        },
+        {
           id: 'zhongpan',
           title: '中盘',
           content: '全套共有 2 个中盘。 分别于第24、64 式',
