@@ -1,7 +1,7 @@
 import React from 'react';
 import Taro from '@tarojs/taro';
 import { AtIcon } from 'taro-ui';
-import { View, Image, Navigator, Text, Button, Ad, AdCustom } from '@tarojs/components';
+import { View, Image, Navigator, Button, Ad, AdCustom } from '@tarojs/components';
 import logoImg from '@src/assets/images/logo.png';
 import iconBasic from '@src/assets/images/icon-list-basic.png';
 import iconView from '@src/assets/images/icon-list-view.png';
@@ -9,9 +9,9 @@ import iconAction from '@src/assets/images/icon-list-action.png';
 import iconForm from '@src/assets/images/icon-list-form.png';
 import iconLayout from '@src/assets/images/icon-list-layout.png';
 import iconHoc from '@src/assets/images/icon-list-hoc.png';
-import config from '@src/config';
 import styles from './index.module.less';
 import { muchclickEvent } from '@src/utils';
+import VersionModal from '@src/components/VersionModal';
 
 interface MyState {
   list: Array<any>;
@@ -76,19 +76,6 @@ export default class Index extends React.Component<{}, MyState> {
     });
   }
 
-  setVideoShow = async (needShow) => {
-    const versionRes: Record<string, any> = await Taro.cloud.callFunction({
-      name: 'setVideoShow',
-      data: { needShow },
-    });
-  };
-
-  onLoad = () => {
-    const { miniProgram } = Taro.getAccountInfoSync();
-    const version = miniProgram.version;
-    this.setState({ version });
-  };
-
   onShareAppMessage() {
     return {
       title: '陈式太极拳学习',
@@ -119,7 +106,7 @@ export default class Index extends React.Component<{}, MyState> {
   };
 
   render() {
-    const { list, version } = this.state;
+    const { list } = this.state;
     return (
       <View className={styles.pageCon}>
         <View className={styles.logo}>
@@ -154,7 +141,7 @@ export default class Index extends React.Component<{}, MyState> {
           <AdCustom unitId='adunit-968d3dcfb9a0a917'></AdCustom>
         </View>
         <View className={styles.footer}>
-          <Text className={styles.footerBtn}>版本：{version || '2.0.1'}</Text>
+          <VersionModal textClass={styles.footerBtn} />
           <Button className={styles.footerBtn} onClick={this.handleAppreciate}>
             赞赏
           </Button>
