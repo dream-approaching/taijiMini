@@ -1,74 +1,76 @@
 {
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    },
-    "emmet.includeLanguages": {
-        "javascript": "javascriptreact"
-    },
-    "javascript.format.enable": false,
-    "editor.formatOnSave": true,
-    "minapp-vscode.prettier": {
-        "useTabs": false,
-        "tabWidth": 4,
-        "printWidth": 100,
-        "singleQuote": false
-    },
-    "prettier.printWidth": 140,
-    "prettier.semi": false,
-    "prettier.tabWidth": 4,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "javascript.preferences.quoteStyle": "single",
-    "typescript.preferences.quoteStyle": "single",
-    "prettier.jsxSingleQuote": true,
-    "prettier.singleQuote": true,
-    "eslint.format.enable": true,
-    "eslint.probe": ["javascript", "javascriptreact", "html", "vue", "markdown"],
-    "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
-    "typescript.format.enable": true,
-    "typescript.reportStyleChecksAsWarnings": true,
-    "typescript.suggestionActions.enabled": true,
-    "typescript.surveys.enabled": true,
-    "typescript.tsc.autoDetect": "on",
-    "typescript.validate.enable": true,
-    "workbench.colorCustomizations": {
-        "activityBar.activeBackground": "#c90036",
-        "activityBar.activeBorder": "#114000",
-        "activityBar.background": "#c90036",
-        "activityBar.foreground": "#e7e7e7",
-        "activityBar.inactiveForeground": "#e7e7e799",
-        "activityBarBadge.background": "#114000",
-        "activityBarBadge.foreground": "#e7e7e7",
-        "statusBar.background": "#960028",
-        "statusBar.foreground": "#e7e7e7",
-        "statusBarItem.hoverBackground": "#c90036",
-        "titleBar.activeBackground": "#960028",
-        "titleBar.activeForeground": "#e7e7e7",
-        "titleBar.inactiveBackground": "#96002899",
-        "titleBar.inactiveForeground": "#e7e7e799",
-        "sash.hoverBorder": "#c90036",
-        "statusBarItem.remoteBackground": "#960028",
-        "statusBarItem.remoteForeground": "#e7e7e7",
-        "commandCenter.border": "#e7e7e799"
-    },
-    "peacock.color": "#960028",
-    "git.ignoreLimitWarning": true,
-    "cSpell.words": [
-        "baiheliangchi",
-        "openid",
-        "unionid",
-        "UNIONID",
-        "cloudbase",
-        "jingangdaodui",
-        "lanzhayi",
-        "liufengsibi",
-        "danbian",
-        "xiexing",
-        "zhongpan",
-        "shantongbei",
-        "tarojs",
-        "subpages"
-    ]
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "javascript.format.enable": false,
+  "editor.formatOnSave": true,
+  "minapp-vscode.prettier": {
+    "useTabs": false,
+    "tabWidth": 2,
+    "printWidth": 100,
+    "singleQuote": false
+  },
+  "eslint.packageManager": "yarn",
+  "prettier.printWidth": 140,
+  "prettier.semi": true,
+  "prettier.trailingComma": "es5",
+  "prettier.tabWidth": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "eslint.format.enable": true,
+  "eslint.probe": ["javascript", "javascriptreact", "html", "vue", "markdown"],
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "typescript.format.enable": true,
+  "typescript.reportStyleChecksAsWarnings": true,
+  "typescript.suggestionActions.enabled": true,
+  "typescript.surveys.enabled": true,
+  "typescript.tsc.autoDetect": "on",
+  "typescript.validate.enable": true,
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#c90036",
+    "activityBar.activeBorder": "#114000",
+    "activityBar.background": "#c90036",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#114000",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "statusBar.background": "#960028",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#c90036",
+    "titleBar.activeBackground": "#960028",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#96002899",
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "sash.hoverBorder": "#c90036",
+    "statusBarItem.remoteBackground": "#960028",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "commandCenter.border": "#e7e7e799"
+  },
+  "peacock.color": "#960028",
+  "git.ignoreLimitWarning": true,
+  "cSpell.words": [
+    "baiheliangchi",
+    "openid",
+    "unionid",
+    "UNIONID",
+    "cloudbase",
+    "jingangdaodui",
+    "lanzhayi",
+    "liufengsibi",
+    "danbian",
+    "xiexing",
+    "zhongpan",
+    "shantongbei",
+    "tarojs",
+    "subpages"
+  ]
 }

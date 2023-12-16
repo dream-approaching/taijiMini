@@ -8,9 +8,10 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/eighteen3/baiheliangchi/index",
-          "pathName": "pages/eighteen3/baiheliangchi/index",
+          "name": "82-金刚捣碓",
+          "pathName": "pages/eighteen3/byOrder/02-jingangdaodui/index",
           "query": "",
+          "launchMode": "default",
           "scene": null
         },
         {
@@ -34,6 +35,13 @@
         {
           "name": "关于我",
           "pathName": "pages/aboutme/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "83-按顺序",
+          "pathName": "pages/eighteen3/byOrder/index",
           "query": "",
           "launchMode": "default",
           "scene": null

@@ -20,21 +20,30 @@ export default function VersionTipModal({ textClass }) {
   }, []);
 
   // 从云函数获取配置信息
-  const [config, setConfig] = useState<any>({});
+  const [versionHistory, setVersionHistory] = useState<
+    {
+      version: string;
+      time: string;
+      desc: string[];
+    }[]
+  >([
+    {
+      version,
+      time: '',
+      desc: [],
+    },
+  ]);
   useEffect(() => {
-    Taro.cloud
-      .callFunction({
-        name: 'getConfig',
-      })
-      .then((res) => {
-        setConfig(res.result);
-      });
+    const res = Taro.getStorageSync('globalConfig');
+    if (res) {
+      setVersionHistory(res.versionHistory);
+    }
   }, []);
 
   return (
     <View className={styles.versionCon}>
       <Text className={textClass} onClick={() => setShowVersionModal(true)}>
-        版本： v{config.version || version}
+        v{versionHistory[0]?.version}
       </Text>
       <AtModal
         className={styles.versionModal}
@@ -43,9 +52,25 @@ export default function VersionTipModal({ textClass }) {
           await setShowVersionModal(false);
         }}
       >
-        <AtModalHeader>v{config.version || version}版本说明</AtModalHeader>
+        <AtModalHeader>版本更新记录</AtModalHeader>
         <AtModalContent>
-          <Text>{config.versionTips?.split(' ').join('\n\r')} </Text>
+          {versionHistory.map((item) => {
+            return (
+              <View className='at-article'>
+                <View className='at-article__h1'>v{item.version}</View>
+                <View className='at-article__info'>{item.time}</View>
+                <View className='at-article__content'>
+                  <View className='at-article__section'>
+                    {item.desc.map((descItem, index) => (
+                      <View className='at-article__p'>
+                        {index + 1}. {descItem}
+                      </View>
+                    ))}
+                  </View>
+                </View>
+              </View>
+            );
+          })}
         </AtModalContent>
       </AtModal>
     </View>

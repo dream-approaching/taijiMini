@@ -1,0 +1,29 @@
+{
+  "imageDataConfig": {
+    "bafawubu/2425/110419.jpg": {
+      "desc": "碾左脚，扣右脚（身体朝前，手不动）",
+      "block": "第 24 势   退步左右採"
+    },
+    "bafawubu/2425/110427.jpg": { "desc": "撤步摆手握拳" },
+    "bafawubu/2425/110432.jpg": { "desc": "后坐下採" },
+    "bafawubu/2425/110441.jpg": { "desc": "左转摆手（斜后方）" },
+    "bafawubu/2425/110452.jpg": { "desc": "收脚撤成弓步摆手握拳" },
+    "bafawubu/2425/110457.jpg": { "desc": "后坐下採" },
+
+    "bafawubu/2425/110515.jpg": {
+      "desc": "收脚摆手（左手斜朝下，右手朝上）",
+      "block": "第 25 势   进步左右挒"
+    },
+    "bafawubu/2425/110520.jpg": { "desc": "左转上步挒手（重心在后）" },
+    "bafawubu/2425/110526.jpg": { "desc": "踏实收脚摆手（右手斜朝下，左手朝上）" },
+    "bafawubu/2425/110530.jpg": { "desc": "右转上步挒手（重心在后）" }
+  },
+
+  "videoDataConfig": {
+    "video04": {
+      "title": "24势-25势",
+      "shotInfo": "2020年06月05日 深圳市",
+      "index": 5
+    }
+  }
+}

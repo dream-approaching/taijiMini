@@ -1,0 +1,16 @@
+{
+  "imageDataConfig": {},
+
+  "videoDataConfig": {
+    "videoAll_f": {
+      "title": "八法五步-正面",
+      "shotInfo": "2020年06月12日 深圳市",
+      "index": 0
+    },
+    "videoAll_b": {
+      "title": "八法五步-背面",
+      "shotInfo": "2020年06月12日 深圳市",
+      "index": 1
+    }
+  }
+}

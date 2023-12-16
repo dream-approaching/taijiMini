@@ -1,6 +1,4 @@
-import { videoType } from '@src/config/constants';
-
-export const imageDataConfig = {
+{imageDataConfig: {
   '83/jingangdaodui3/164907.jpg': {
     desc: '双逆缠加掤劲',
   },
@@ -18,19 +16,19 @@ export const imageDataConfig = {
   '83/jingangdaodui3/164958.jpg': { desc: '胸向右转，拳肘相合，往下沉' },
   '83/jingangdaodui3/165002.jpg': { desc: '提膝举拳，左手在右大腿内侧' },
   '83/jingangdaodui3/165007.jpg': { desc: '震脚砸拳' },
-};
+},
 
-export const videoDataConfig = {
-  [videoType.detail.name]: {
+videoDataConfig:{
+  detail: {
     title: '动作要领',
     shotInfo: '吴少华 2019年10月22日 娄底市',
   },
-  [videoType.number.name]: {
+  number: {
     title: '分解动作',
     shotInfo: '吴少华 2019年10月22日 娄底市',
   },
-  [videoType.normal.name]: {
+  normal: {
     title: '正常',
     shotInfo: '吴少华 2019年10月22日 娄底市',
   },
-};
+},}

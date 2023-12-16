@@ -1,10 +1,9 @@
 import Taro from '@tarojs/taro';
 import React, { Component } from 'react';
-import { View, Text } from '@tarojs/components';
+import { View } from '@tarojs/components';
 import TimelineList from '@src/components/TimelineList';
 import PageContainer from '@src/components/PageContainer';
 import CommonPage from '@src/components/CommonPage';
-import { imageDataConfig, videoDataConfig } from './dataConfig';
 import { videoAdId } from '../../index.config';
 
 export default class ViewPage extends Component {
@@ -34,8 +33,6 @@ export default class ViewPage extends Component {
     return (
       <CommonPage
         path='83/prepare'
-        imageDataConfig={imageDataConfig}
-        videoDataConfig={videoDataConfig}
         render={({ videoList }) => {
           return (
             <PageContainer videoList={videoList} videoAdId={videoAdId}>

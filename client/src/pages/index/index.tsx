@@ -74,6 +74,14 @@ export default class Index extends React.Component<{}, MyState> {
         Taro.setStorageSync('showVideo', true);
       }
     });
+    // 读取配置然后放缓存中
+    Taro.cloud
+      .callFunction({
+        name: 'getConfig',
+      })
+      .then((res) => {
+        Taro.setStorageSync('globalConfig', res.result);
+      });
   }
 
   onShareAppMessage() {
@@ -141,7 +149,9 @@ export default class Index extends React.Component<{}, MyState> {
           <AdCustom unitId='adunit-968d3dcfb9a0a917'></AdCustom>
         </View>
         <View className={styles.footer}>
-          <VersionModal textClass={styles.footerBtn} />
+          <View style={{ flex: 1 }}>
+            <VersionModal textClass={styles.footerBtn} />
+          </View>
           <Button className={styles.footerBtn} onClick={this.handleAppreciate}>
             赞赏
           </Button>

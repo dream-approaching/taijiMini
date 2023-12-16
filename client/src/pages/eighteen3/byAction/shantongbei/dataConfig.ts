@@ -1,6 +1,4 @@
-import { videoType } from '@src/config/constants';
-
-export const imageDataConfig = {
+{imageDataConfig: {
   '83/shantongbei/141027.jpg': { desc: '胸向右转，两指尖相对，两臂掤圆' },
   '83/shantongbei/141031.jpg': { desc: '胸向左转，两手往上掤，身体往下沉' },
   '83/shantongbei/141035.jpg': { desc: '胸向右转，两掌根相合在腹前' },
@@ -23,23 +21,23 @@ export const imageDataConfig = {
   '83/shantongbei/141253.jpg': { desc: '重心后移，扣左脚' },
   '83/shantongbei/141257.jpg': { desc: '重心前移，收右脚向左顶胯，同时手向上托' },
   '83/shantongbei/141303.jpg': { desc: '转体劈掌，左手腕跟肩同高，右手在右膝上方' },
-};
+},
 
-export const videoDataConfig = {
-  [videoType.attack.name]: {
+videoDataConfig:{
+  attack: {
     title: '攻防含义',
     shotInfo: '吴少华 2019年10月28日 娄底市',
   },
-  [videoType.detail.name]: {
+  detail: {
     title: '动作要领',
     shotInfo: '吴少华 2019年10月28日 娄底市',
   },
-  [videoType.number.name]: {
+  number: {
     title: '分解动作',
     shotInfo: '吴少华 2019年10月28日 娄底市',
   },
-  [videoType.normal.name]: {
+  normal: {
     title: '正常',
     shotInfo: '吴少华 2019年10月28日 娄底市',
   },
-};
+},}

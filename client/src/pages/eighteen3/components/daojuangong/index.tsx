@@ -1,6 +1,5 @@
 import Taro, { useShareAppMessage, useShareTimeline, useAddToFavorites } from '@tarojs/taro';
 import React from 'react';
-import { imageDataConfig, videoDataConfig } from './dataConfig';
 import CommonPage from '@src/components/CommonPage';
 import { videoAdId } from '../../index.config';
 
@@ -25,13 +24,5 @@ export default () => {
       imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/11.jpg',
     };
   });
-  return (
-    <CommonPage
-      path='83/daojuangong'
-      imageDataConfig={imageDataConfig}
-      videoDataConfig={videoDataConfig}
-      videoAdId={videoAdId}
-      showImgIndex
-    />
-  );
+  return <CommonPage path='83/daojuangong' videoAdId={videoAdId} />;
 };

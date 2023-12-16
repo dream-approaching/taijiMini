@@ -29,15 +29,13 @@ export default class ViewPage extends Component<{}, MyState> {
           path: 'warmup',
         },
       });
-      const videoList: Array<VideoItem> = [];
-      fileListRes.result.fileList.forEach((item: VideoItem) => {
-        const format = item.Key.split('.')[1];
-        if (format === 'mp4') {
-          videoList[0] = { ...item, title: '集体热身', shotInfo: '郑金寿 2020年06月14日 深圳市' };
-        }
-      });
+      console.log(
+        '%c  fileListRes.result.videoList:',
+        'color: #0e93e0;background: #aaefe5;',
+        fileListRes.result.videoList
+      );
       this.setState({
-        videoList,
+        videoList: fileListRes.result.videoList,
       });
       Taro.hideLoading();
     } catch (error) {

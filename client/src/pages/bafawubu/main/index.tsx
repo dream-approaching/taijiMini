@@ -1,6 +1,5 @@
 import Taro, { useShareAppMessage, useShareTimeline, useAddToFavorites } from '@tarojs/taro';
 import React from 'react';
-import { imageDataConfig, videoDataConfig } from './dataConfig';
 import CommonPage from '@src/components/CommonPage';
 import PageContainer from '@src/components/PageContainer';
 import { View, Text } from '@tarojs/components';
@@ -31,9 +30,6 @@ export default () => {
   return (
     <CommonPage
       path='bafawubu'
-      videoCustom
-      imageDataConfig={imageDataConfig}
-      videoDataConfig={videoDataConfig}
       render={({ videoList }) => {
         return (
           <PageContainer videoList={videoList} videoAdId={videoAdId}>

@@ -1,10 +1,8 @@
 import Taro from '@tarojs/taro';
 import React from 'react';
-import { getVideoType } from '@src/utils';
-import { videoType } from '@src/config/constants';
 import PageContainer from '@src/components/PageContainer';
 import { ImgItem, VideoItem } from '@src/config/common';
-import { View, Text } from '@tarojs/components';
+import { View } from '@tarojs/components';
 
 interface MyState {
   imgList: Array<ImgItem>;
@@ -12,11 +10,7 @@ interface MyState {
 }
 interface MyProps {
   path: string;
-  imageDataConfig: object;
-  videoDataConfig: object;
-  videoCustom?: boolean;
   render?: any;
-  showImgIndex?: boolean;
   videoAdId?: string;
 }
 export default class extends React.Component<MyProps, MyState> {
@@ -32,49 +26,16 @@ export default class extends React.Component<MyProps, MyState> {
   }
 
   getData = async () => {
-    const { path, imageDataConfig, videoDataConfig, videoCustom, showImgIndex } = this.props;
+    const { path } = this.props;
     try {
       Taro.showLoading({ title: '加载中' });
       const fileListRes: Record<string, any> = await Taro.cloud.callFunction({
         name: 'getFileList',
         data: { path },
       });
-      const imgList: Array<ImgItem> = [];
-      const videoList: Array<VideoItem> = [];
-      fileListRes.result.fileList.forEach((item: ImgItem) => {
-        const [keyPath, format] = item.Key.split('.');
-        if (format === 'png' || format === 'jpg') {
-          const keyArr = Object.keys(imageDataConfig);
-          fileListRes.result.fileList.map((item) => {
-            if (keyArr.indexOf(item.Key) > -1) {
-              const index = keyArr.findIndex((keyItem) => item.Key === keyItem);
-              imgList[index] = {
-                ...item,
-                desc: `${showImgIndex ? `${index + 1}、` : ''}${imageDataConfig[item.Key].desc}`,
-                block: imageDataConfig[item.Key].block,
-              };
-            }
-          });
-        }
-        if (format === 'mp4') {
-          const type = getVideoType(item.Key);
-          // baduanjin/video02
-          if (videoCustom) {
-            const [paths, name] = keyPath.split('/');
-            if (videoDataConfig[name]) {
-              videoList.push({ ...item, ...videoDataConfig[name] });
-            }
-          } else {
-            videoList[videoType[type].index] = {
-              ...item,
-              ...videoDataConfig[videoType[type].name],
-            };
-          }
-        }
-      });
       this.setState({
-        imgList,
-        videoList,
+        imgList: fileListRes.result.imgList,
+        videoList: fileListRes.result.videoList,
       });
       Taro.hideLoading();
     } catch (error) {

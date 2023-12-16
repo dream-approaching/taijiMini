@@ -1,8 +1,25 @@
 .versionCon {
-  flex: 1;
 }
 .versionModal {
   z-index: 10000;
+  padding: 0;
+  :global {
+    .at-modal__content {
+      padding: 0;
+      padding-bottom: 30px;
+      .at-article {
+        position: relative;
+        .at-article__info {
+          position: absolute;
+          top: 20px;
+          right: 10px;
+        }
+      }
+    }
+    .at-article__p {
+      margin-top: 0;
+    }
+  }
   text {
     font-size: 30px;
     text-align: left;

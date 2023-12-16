@@ -73,10 +73,6 @@ export default class extends React.Component<PropsType, MyState> {
   render() {
     const { currentTab, globalHide, videoShow, speedArr, selectorSpeed } = this.state;
     const { imgList = [], videoList = [], children, videoAdId } = this.props;
-    console.log('%c zjs videoList2222:', 'color: #fff;background: #b457ff;', videoList);
-    console.log('%c zjs children:', 'color: #fff;background: #b457ff;', children);
-    console.log('%c zjs typeof children:', 'color: #fff;background: #b457ff;', typeof children);
-    console.log('%c zjs videoAdId222:', 'color: #fff;background: #b457ff;', videoAdId);
     const tabList = [{ title: '图文描述' }, { title: '视频描述' }];
     const localShow = Taro.getStorageSync('showVideo'); // 本地缓存是否允许显示
     // 审核时候 videoShow 需要改成 false，此时如果缓存中 showVideo 为 true 时也是会显示的
@@ -85,8 +81,6 @@ export default class extends React.Component<PropsType, MyState> {
     const childrenOne =
       children && children.length ? children[0] : children && !children.length ? children : null;
     const childrenTwo = children && children.length ? children[1] : null;
-    console.log('%c zjs childrenOne:', 'color: #fff;background: #b457ff;', childrenOne);
-    console.log('%c zjs childrenTwo:', 'color: #fff;background: #b457ff;', childrenTwo);
     return (
       <View className={styles.page}>
         <AtTabs

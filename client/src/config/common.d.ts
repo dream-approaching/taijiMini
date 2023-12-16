@@ -1,3 +1,10 @@
+export class FileItem {
+  Key: string;
+  ETag: string;
+  LastModified: string;
+  StorageClass: string;
+  Size: string;
+}
 export class ImgItem {
   Key: string;
   ETag: string;
