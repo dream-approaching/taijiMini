@@ -66,6 +66,10 @@ export default class Index extends React.Component<{}, MyState> {
           title: '中盘',
         },
         {
+          id: '25-26-baiheliangchi2',
+          title: '白鹤亮翅 斜行拗步',
+        },
+        {
           id: '27-shantongbei',
           title: '闪通背',
         },

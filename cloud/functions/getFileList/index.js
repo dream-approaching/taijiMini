@@ -16,8 +16,6 @@ const { storage } = new CloudBase({
   envId: 'dev-vza4u', // 云开发环境ID，可在腾讯云云开发控制台获取
 });
 
-let index = 0;
-
 /**
  * 这个示例将经自动鉴权过的小程序用户 openid 返回给小程序端
  *
@@ -27,6 +25,7 @@ let index = 0;
 exports.main = async (event, context) => {
   const { path } = event;
   const wxContext = cloud.getWXContext();
+  let index = 0;
 
   const fileListRes = await storage.listDirectoryFiles(path);
   console.log('%c  path:', 'color: #0e93e0;background: #aaefe5;', path);

@@ -1,3 +1,5 @@
-export default {
+export default definePageConfig({
   navigationBarTitleText: '中盘',
-};
+  enableShareAppMessage: true,
+  enableShareTimeline: true,
+});

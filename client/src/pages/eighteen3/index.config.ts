@@ -1,5 +1,7 @@
 export default {
   navigationBarTitleText: '83式',
+  enableShareAppMessage: true,
+  enableShareTimeline: true,
 };
 
 // 视频贴片广告id
