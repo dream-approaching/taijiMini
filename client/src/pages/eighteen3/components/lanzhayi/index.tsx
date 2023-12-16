@@ -1,27 +1,9 @@
 import Taro, { useShareAppMessage, useShareTimeline, useAddToFavorites } from '@tarojs/taro';
 import CommonPage from '@src/components/CommonPage';
 import { videoAdId } from '../../index.config';
+import useShare from '../../hooks/share';
 
 export default () => {
-  useShareAppMessage(() => {
-    return {
-      title: '老架一路: 懒扎衣',
-      path: '/pages/eighteen3/lanzhayi/index',
-      imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/54.jpg',
-    };
-  });
-  useShareTimeline(() => {
-    return {
-      title: '老架一路: 懒扎衣',
-      path: '/pages/eighteen3/lanzhayi/index',
-      imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/11.jpg',
-    };
-  });
-  useAddToFavorites(() => {
-    return {
-      title: '老架一路: 懒扎衣',
-      imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/11.jpg',
-    };
-  });
+  useShare();
   return <CommonPage path='83/lanzhayi' videoAdId={videoAdId} />;
 };

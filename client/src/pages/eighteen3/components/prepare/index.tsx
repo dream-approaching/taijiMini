@@ -9,23 +9,23 @@ import { videoAdId } from '../../index.config';
 export default class ViewPage extends Component {
   onShareAppMessage() {
     return {
-      title: '老架一路: 预备式',
-      path: '/pages/eighteen3/prepare/index',
+      title: '陈式太极拳 八十三式',
+      path: 'pages/eighteen3/byOrder/index',
       imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/54.jpg',
     };
   }
 
   onShareTimeline() {
     return {
-      title: '老架一路: 预备式',
-      path: '/pages/eighteen3/prepare/index',
+      title: '陈式太极拳 八十三式',
+      path: 'pages/eighteen3/byOrder/index',
       imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/11.jpg',
     };
   }
 
   onAddToFavorites() {
     return {
-      title: '老架一路: 预备式',
+      title: '陈式太极拳 八十三式',
       imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/11.jpg',
     };
   }

@@ -67,39 +67,95 @@ export default class Index extends React.Component<{}, MyState> {
         },
         {
           id: '25-26-baiheliangchi2',
-          title: '白鹤亮翅 斜行拗步',
+          title: '白鹤亮翅 斜行',
         },
         {
           id: '27-shantongbei',
           title: '闪通背',
         },
         {
-          id: '30-danbian',
-          title: '单鞭',
+          id: '28-30-yanshouhongchui',
+          title: '掩手肱捶 大六封四闭 单鞭',
         },
         {
-          id: '48-danbian',
-          title: '单鞭',
+          id: '31-32-yunshou',
+          title: '运手 高探马',
         },
         {
-          id: '52-danbian',
-          title: '单鞭',
+          id: '33-35-youcajiao',
+          title: '右擦脚 左擦脚 转身左蹬脚',
         },
         {
-          id: '57-danbian',
-          title: '单鞭',
+          id: '36-38-qiantangaobu',
+          title: '前蹚拗步 击地锤 翻身二起脚',
         },
         {
-          id: '70-danbian',
-          title: '单鞭',
+          id: '39-40-huxinchui',
+          title: '护心锤 旋风脚',
         },
         {
-          id: '77-danbian',
-          title: '单鞭',
+          id: '41-43-youdengjiao',
+          title: '右蹬脚 海底翻花 掩手肱捶',
+        },
+        {
+          id: '44-xiaoqinda',
+          title: '小擒打',
+        },
+        {
+          id: '45-48-baotoutuishan',
+          title: '抱头推山 三换掌 六封四闭 单鞭',
+        },
+        {
+          id: '49-52-qianzhaohouzhao',
+          title: '前招后招 野马分鬃 大六封四闭 单鞭',
+        },
+        {
+          id: '53-57-shuangzhenjiao',
+          title: '双震脚 玉女穿梭 懒扎衣 六封四闭 单鞭',
+        },
+        {
+          id: '58-60-yunshou',
+          title: '运手 双摆莲 跌叉',
+        },
+        {
+          id: '61-jinjiduli',
+          title: '左右金鸡独立',
+        },
+        {
+          id: '62-63-daojuangong',
+          title: '倒卷肱 退步压肘',
+        },
+        {
+          id: '64-zhongpan',
+          title: '中盘',
+        },
+        {
+          id: '65-66-baiheliangchi2',
+          title: '白鹤亮翅 斜行',
         },
         {
           id: '67-shantongbei',
           title: '闪通背',
+        },
+        {
+          id: '68-70-yanshouhongchui',
+          title: '掩手肱捶 大六封四闭 单鞭',
+        },
+        {
+          id: '71-72-yunshou',
+          title: '运手 高探马',
+        },
+        {
+          id: '73-77-shizidanbailian',
+          title: '十字单摆莲 指裆锤 白猿献果 六封四闭 单鞭',
+        },
+        {
+          id: '78-81-quedilong',
+          title: '雀地龙 上步七星 退步跨虎 转身双摆莲',
+        },
+        {
+          id: '82-83-dangtoupao',
+          title: '当头炮 风扫梅花 金刚捣碓 收势',
         },
       ],
     };
