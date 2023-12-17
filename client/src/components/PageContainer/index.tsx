@@ -124,6 +124,9 @@ export default class extends React.Component<PropsType, MyState> {
               <View className='floatAd'>
                 <AdCustom unitId='adunit-ac9a4cba4e559076'></AdCustom>
               </View>
+              <View className='customBannerAd'>
+                <AdCustom unitId='adunit-773d880e23ea93e7'></AdCustom>
+              </View>
             </ScrollView>
           </AtTabsPane>
           <AtTabsPane current={currentTab} index={1}>

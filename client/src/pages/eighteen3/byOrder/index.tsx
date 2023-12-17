@@ -218,6 +218,9 @@ export default class Index extends React.Component<{}, MyState> {
         <View className='floatAd'>
           <AdCustom unitId='adunit-77d5696732c26384'></AdCustom>
         </View>
+        <View className='customBannerAd'>
+          <AdCustom unitId='adunit-773d880e23ea93e7'></AdCustom>
+        </View>
       </View>
     );
   }

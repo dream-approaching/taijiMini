@@ -159,6 +159,9 @@ export default class Index extends React.Component<{}, MyState> {
             联系客服
           </Button>
         </View>
+        <View className='customBannerAd'>
+          <AdCustom unitId='adunit-773d880e23ea93e7'></AdCustom>
+        </View>
       </View>
     );
   }
