@@ -1,7 +1,7 @@
 import Taro from '@tarojs/taro';
 import React from 'react';
-import Dangtoupao from '../../components/dangtoupao';
+import Yunshou from '../../components/yunshou';
 
 export default () => {
-  return <Dangtoupao />;
+  return <Yunshou />;
 };

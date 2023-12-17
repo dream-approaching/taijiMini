@@ -6,5 +6,5 @@ import useShare from '../../hooks/share';
 
 export default () => {
   useShare();
-  return <CommonPage path='83/dantoupao' videoAdId={videoAdId} />;
+  return <CommonPage path='83/dangtoupao' videoAdId={videoAdId} />;
 };

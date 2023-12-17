@@ -42,8 +42,12 @@ export default class Index extends React.Component<{}, MyState> {
           title: '白鹤亮翅 斜行 初收 前蹚拗步',
         },
         {
-          id: '11-15-xiexing2',
-          title: '第二斜行 再收 前蹚拗步 掩手肱捶 十字手',
+          id: '11-13-xiexing2',
+          title: '第二斜行 再收 前蹚拗步',
+        },
+        {
+          id: '14-15-yanshouhongchui',
+          title: '掩手肱捶 十字手',
         },
         {
           id: '16-jingangdaodui3',
@@ -74,7 +78,7 @@ export default class Index extends React.Component<{}, MyState> {
           title: '闪通背',
         },
         {
-          id: '28-30-yanshouhongchui',
+          id: '28-30-yanshouhongchui2',
           title: '掩手肱捶 大六封四闭 单鞭',
         },
         {
@@ -114,7 +118,7 @@ export default class Index extends React.Component<{}, MyState> {
           title: '双震脚 玉女穿梭 懒扎衣 六封四闭 单鞭',
         },
         {
-          id: '58-60-yunshou',
+          id: '58-60-yunshou2',
           title: '运手 双摆莲 跌叉',
         },
         {

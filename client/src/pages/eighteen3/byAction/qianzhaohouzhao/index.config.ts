@@ -1,5 +1,5 @@
 export default definePageConfig({
-  navigationBarTitleText: '第二斜行 再收 前蹚拗步 掩手肱捶 十字手',
+  navigationBarTitleText: '前招后招 野马分鬃',
   enableShareAppMessage: true,
   enableShareTimeline: true,
 });

@@ -45,6 +45,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "83-按招式",
+          "pathName": "pages/eighteen3/byAction/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }
