@@ -6,8 +6,13 @@ cloud.init({
 
 exports.main = async () => {
   return {
-    version: '2.3.0',
+    version: '2.3.1',
     versionHistory: [
+      {
+        version: '2.3.1',
+        time: '2023.12.23',
+        desc: ['83式：新增25-26式 白鹤亮翅 斜行'],
+      },
       {
         version: '2.3.0',
         time: '2023.12.17',
