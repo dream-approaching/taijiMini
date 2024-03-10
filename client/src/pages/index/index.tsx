@@ -26,8 +26,8 @@ export default class Index extends React.Component<{}, MyState> {
       list: [
         {
           id: 'warnup',
-          title: '热身运动',
-          content: '包含头部、关节、踢腿以及桩功等',
+          title: '基本功练习',
+          content: '含热身运动、内功心法等基本功练习',
           icon: iconBasic,
         },
         {
