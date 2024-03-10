@@ -6,8 +6,13 @@ cloud.init({
 
 exports.main = async () => {
   return {
-    version: '2.3.1',
+    version: '2.4.1',
     versionHistory: [
+      {
+        version: '2.4.1',
+        time: '2024.3.10',
+        desc: ['热身运动改为基本功', '完善八段锦内容'],
+      },
       {
         version: '2.3.1',
         time: '2023.12.23',
@@ -27,7 +32,7 @@ exports.main = async () => {
     aboutMe: {
       title: '刘建成老师简介',
       // 可以是云存储地址 cloud://dev-vza4u.6465-dev-vza4u-1302956475/bafawubu/2023/110045.jpg
-      avatar: '',
+      avatar: [],
       desc: [
         '　　刘建成先生，生于1955年，湖南省邵东市人。自1968年起，勤奋修习多种拳术和器械。1998年，拜入师公马虹先生门下，专心学习传统陈氏太极拳。',
         '　　刘建成先生是国家武术七段、国家级社会体育指导员、国家一级裁判和高级教练，拥有湖南省太极拳协会名誉副主席和湖南省太极名师的荣誉称号。',
