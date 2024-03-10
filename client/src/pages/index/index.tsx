@@ -152,9 +152,9 @@ export default class Index extends React.Component<{}, MyState> {
           <View style={{ flex: 1 }}>
             <VersionModal textClass={styles.footerBtn} />
           </View>
-          <Button className={styles.footerBtn} onClick={this.handleAppreciate}>
+          {/* <Button className={styles.footerBtn} onClick={this.handleAppreciate}>
             赞赏
-          </Button>
+          </Button> */}
           <Button open-type='contact' className={styles.footerBtn}>
             联系客服
           </Button>
