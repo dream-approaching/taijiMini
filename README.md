@@ -25,6 +25,7 @@
   - 文件重命名 video_attack video_detail video_normal video_number
   - 上传到小程序云开发的云存储
 - 图片处理
+  - 图片用 U 盘传到电脑，用微信传名字会被改掉
   - 打开 video_number 视频，点击手机的截图
   - 用脚本改名字，脚本在根目录有，要在每个图片文件夹放一份
   - 图片压缩

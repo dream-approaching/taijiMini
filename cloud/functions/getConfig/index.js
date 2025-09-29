@@ -9,6 +9,11 @@ exports.main = async () => {
     version: '2.4.1',
     versionHistory: [
       {
+        version: '2.4.2',
+        time: '2024.9.22',
+        desc: ['83式：新增14-15式 掩手肱捶 十字手'],
+      },
+      {
         version: '2.4.1',
         time: '2024.3.10',
         desc: ['热身运动改为基本功', '完善八段锦内容'],
