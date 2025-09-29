@@ -23,7 +23,7 @@ export default class ViewPage extends Component<{}, MyState> {
 
   onShareAppMessage() {
     return {
-      title: '关于我',
+      title: '关于我们',
       path: '/pages/aboutme/index',
       imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/54.jpg',
     };
@@ -31,7 +31,7 @@ export default class ViewPage extends Component<{}, MyState> {
 
   onShareTimeline() {
     return {
-      title: '关于我',
+      title: '关于我们',
       path: '/pages/aboutme/index',
       imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/11.jpg',
     };
@@ -39,7 +39,7 @@ export default class ViewPage extends Component<{}, MyState> {
 
   onAddToFavorites() {
     return {
-      title: '关于我',
+      title: '关于我们',
       imageUrl: 'cloud://dev-vza4u.6465-dev-vza4u-1302956475/others/11.jpg',
     };
   }

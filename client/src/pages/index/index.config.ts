@@ -1,3 +1,3 @@
 export default {
-  navigationBarTitleText: '太极笔记',
+  navigationBarTitleText: '陈式太极拳学习',
 };

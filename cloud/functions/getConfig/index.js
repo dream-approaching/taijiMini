@@ -42,5 +42,8 @@ exports.main = async () => {
       ],
       author: '2023-08-02　　郑金寿编辑于深圳',
     },
+    index: {
+      menu: [],
+    },
   };
 };

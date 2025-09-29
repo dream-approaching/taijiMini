@@ -1,3 +1,3 @@
 export default {
-  navigationBarTitleText: '热身运动',
+  navigationBarTitleText: '基本功练习',
 };

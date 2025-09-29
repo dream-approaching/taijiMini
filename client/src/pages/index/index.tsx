@@ -55,9 +55,23 @@ export default class Index extends React.Component<{}, MyState> {
           icon: iconLayout,
         },
         {
+          id: 'seventeen1',
+          title: '二路炮锤',
+          content: '陈式太极拳二路炮锤 71式',
+          // todo 换图标
+          icon: iconLayout,
+        },
+        {
+          id: 'quanli',
+          title: '拳理阐微',
+          content: '陈式太极拳拳理阐微',
+          // todo 换图标
+          icon: iconHoc,
+        },
+        {
           id: 'aboutme',
-          title: '关于我',
-          content: '关于我',
+          title: '关于我们',
+          content: '关于我们',
           icon: iconHoc,
         },
       ],
