@@ -39,7 +39,12 @@
     "useApiHook": false,
     "useApiHostProcess": false,
     "lazyloadPlaceholderEnable": false,
-    "useStaticServer": true
+    "useStaticServer": true,
+    "compileWorklet": false,
+    "localPlugins": false,
+    "condition": false,
+    "swc": false,
+    "disableSWC": true
   },
   "compileType": "miniprogram",
   "simulatorType": "wechat",
