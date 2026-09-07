@@ -14,7 +14,7 @@
     "singleQuote": false
   },
   "eslint.packageManager": "yarn",
-  "prettier.printWidth": 140,
+  "prettier.printWidth": 260,
   "prettier.semi": true,
   "prettier.trailingComma": "es5",
   "prettier.tabWidth": 2,
@@ -47,30 +47,25 @@
     "statusBar.foreground": "#e7e7e7",
     "statusBarItem.hoverBackground": "#c90036",
     "titleBar.activeBackground": "#960028",
-    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.activeForeground": "#595959",
     "titleBar.inactiveBackground": "#96002899",
     "titleBar.inactiveForeground": "#e7e7e799",
     "sash.hoverBorder": "#c90036",
-    "statusBarItem.remoteBackground": "#960028",
+    "statusBarItem.remoteBackground": "#000000",
     "statusBarItem.remoteForeground": "#e7e7e7",
-    "commandCenter.border": "#e7e7e799"
+    "commandCenter.border": "#e7e7e799",
+    "activityBarTop.activeBackground": "#c90036",
+    "activityBarTop.background": "#c90036",
+    "activityBarTop.foreground": "#e7e7e7",
+    "activityBarTop.inactiveForeground": "#e7e7e799",
+    "commandCenter.foreground": "#595959",
+    "statusBar.debuggingBackground": "#960028",
+    "statusBar.debuggingForeground": "#e7e7e7"
   },
   "peacock.color": "#960028",
   "git.ignoreLimitWarning": true,
-  "cSpell.words": [
-    "baiheliangchi",
-    "openid",
-    "unionid",
-    "UNIONID",
-    "cloudbase",
-    "jingangdaodui",
-    "lanzhayi",
-    "liufengsibi",
-    "danbian",
-    "xiexing",
-    "zhongpan",
-    "shantongbei",
-    "tarojs",
-    "subpages"
-  ]
+  "cSpell.words": ["baiheliangchi", "openid", "unionid", "UNIONID", "cloudbase", "jingangdaodui", "lanzhayi", "liufengsibi", "danbian", "xiexing", "zhongpan", "shantongbei", "tarojs", "subpages"],
+  "[json]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  }
 }
