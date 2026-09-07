@@ -1,0 +1,14 @@
+client/src/pages/eighteen3/components/baiheliangchi/dataConfig.json
+  h_21d7ab2a2d1963 3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "3.27.1714",
+  "base_commit_sha": "db2b556d3eb4b4ea4cfafd72f785e78e6b4426c7",
+  "prompts": {},
+  "humans": {
+    "h_21d7ab2a2d1963": {
+      "author": "z30045905 <zhengjinshou@h-partners.com>"
+    }
+  }
+}
