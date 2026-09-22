@@ -42,6 +42,10 @@ exports.main = async (event, context) => {
     const jsonData = JSON.parse(res.fileContent.toString());
     console.log('%c  jsonData:', 'color: #0e93e0;background: #aaefe5;', jsonData);
     const keyArr = Object.keys(jsonData.imageDataConfig);
+    const fileMap = fileListRes.reduce((acc, item) => {
+      acc[item.Key] = item;
+      return acc;
+    }, {});
 
     const getImageData = (item, key) => {
       const blockText = jsonData.imageDataConfig[key].block || '';
@@ -55,14 +59,19 @@ exports.main = async (event, context) => {
         block: jsonData.imageDataConfig[key].block || '',
       };
     };
+
+    // 以 dataConfig 的 key 为准组装图片列表，支持引用其他目录的云存储图片
+    keyArr.forEach((key) => {
+      const format = key.split('.').pop();
+      if (format !== 'png' && format !== 'jpg') {
+        return;
+      }
+      const fileItem = fileMap[key] || { Key: key, ETag: key };
+      imgList.push(getImageData(fileItem, key));
+    });
+
     fileListRes.forEach((item) => {
       const [keyPath, format] = item.Key.split('.');
-      if (format === 'png' || format === 'jpg') {
-        const matchingKey = keyArr.find((key) => key === item.Key);
-        if (matchingKey) {
-          imgList.push(getImageData(item, matchingKey));
-        }
-      }
       if (format === 'mp4') {
         const type = getVideoType(item.Key);
         console.log('%c  type:', 'color: #0e93e0;background: #aaefe5;', type);

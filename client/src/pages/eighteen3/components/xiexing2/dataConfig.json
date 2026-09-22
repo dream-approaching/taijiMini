@@ -1,12 +1,42 @@
 {
   "imageDataConfig": {
-    "83/xiexing2/142418.jpg": { "desc": "重心右移，胸向右转，掤，左手在腹前中线，右手与肩同高" },
+    "83/xiexing2/142418.jpg": { "desc": "重心右移，胸向右转，掤，左手在腹前中线，右手与肩同高", "block": "第二斜行衔接动作" },
     "83/xiexing2/142423.jpg": { "desc": "松胯踏实，裆走后弧倒重心，右手落在膝的上方" },
     "83/xiexing2/142427.jpg": {
       "desc": "裆走下弧倒重心螺旋靠上去，肩胯同时靠，右手在胸前中线，掌心朝上，左手在左跨旁，掌心朝下"
     },
     "83/xiexing2/142433.jpg": { "desc": "裆走下弧倒重心，开右脚，右手立掌加掤劲" },
-    "83/xiexing2/142437.jpg": { "desc": "扫腿合手" }
+    "83/xiexing2/142437.jpg": { "desc": "扫腿合手" },
+    "83/baiheliangchi/180344.jpg": { "desc": "裆走下弧倒重心，边提边沉，肘膝相合" },
+    "83/baiheliangchi/180353.jpg": { "desc": "向前加一个掤劲" },
+    "83/baiheliangchi/180400.jpg": { "desc": "下蹬后捋" },
+    "83/baiheliangchi/180410.jpg": { "desc": "踏实右转摆手与肩同高" },
+    "83/baiheliangchi/180415.jpg": { "desc": "合手摆头" },
+    "83/baiheliangchi/180419.jpg": { "desc": "搂膝滚肘，重心在后，左手在左膝外侧" },
+    "83/baiheliangchi/180423.jpg": { "desc": "左手勾手，右手往下按再往前推，同时倒重心，推到左胸前，在左膝的内侧" },
+    "83/baiheliangchi/180427.jpg": { "desc": "胸约向左转，双逆缠加掤劲" },
+    "83/baiheliangchi/180431.jpg": { "desc": "胸向右转，走肩走肘走手" },
+    "83/baiheliangchi/180435.jpg": { "desc": "走到手脚相合的地方，胸向左转，下塌外捻，勾手掤圆" },
+    "83/baiheliangchi/180441.jpg": { "desc": "胸向右转，两手下落，两指尖相对，两臂掤圆", "block": "再收" },
+    "83/baiheliangchi/180445.jpg": { "desc": "胸向左转，两手往上掤，身体往下沉" },
+    "83/baiheliangchi/180449.jpg": { "desc": "胸向右转，两掌根相合在腹前" },
+    "83/baiheliangchi/180452.jpg": { "desc": "胸向左转，两手往上托，右手小指在肘手小臂内侧" },
+    "83/baiheliangchi/180504.jpg": { "desc": "双逆缠往下按" },
+    "83/baiheliangchi/180507.jpg": { "desc": "扣右脚" },
+    "83/baiheliangchi/180511.jpg": { "desc": "重心后移，收脚踮地" },
+    "83/baiheliangchi/180515.jpg": { "desc": "提膝下採" },
+    "83/baiheliangchi/180519.jpg": { "desc": "塌掌根", "block": "前蹚拗步" },
+    "83/baiheliangchi/180523.jpg": { "desc": "加掤劲" },
+    "83/baiheliangchi/180526.jpg": { "desc": "往后下捋，膝往上顶" },
+    "83/baiheliangchi/180537.jpg": { "desc": "翻掌" },
+    "83/baiheliangchi/180542.jpg": { "desc": "摆脚合手，脚跟落地，两手与胸同高" },
+    "83/baiheliangchi/180603.jpg": { "desc": "踏实松胯，重心前移，跪膝，擒拿滚肘" },
+    "83/baiheliangchi/180607.jpg": { "desc": "裆走下弧倒重心，边提边沉肘膝相合" },
+    "83/baiheliangchi/180611.jpg": { "desc": "斜角蹬出去" },
+    "83/baiheliangchi/180614.jpg": { "desc": "里扣踏实" },
+    "83/baiheliangchi/180617.jpg": { "desc": "松胯下沉，裆走下弧倒重心螺旋靠上去，肩胯同时靠" },
+    "83/baiheliangchi/180621.jpg": { "desc": "加掤劲，胸向右转，走肩走肘走手" },
+    "83/baiheliangchi/180623.jpg": { "desc": "胸向左转，下塌外捻，两手掤圆，肩与胯合，肘与膝合，手与脚合" }
   },
 
   "videoDataConfig": {
