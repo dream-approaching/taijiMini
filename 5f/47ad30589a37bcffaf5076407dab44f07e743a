@@ -1,0 +1,14 @@
+"client/src/pages/eighteen3/components/yunshou/dataConfig backup.json"
+  h_544aa6b3966a47 17-21
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "5.30.1",
+  "base_commit_sha": "5f47ad30589a37bcffaf5076407dab44f07e743a",
+  "prompts": {},
+  "humans": {
+    "h_544aa6b3966a47": {
+      "author": "longzi <longzizheng@gmail.com>"
+    }
+  }
+}
