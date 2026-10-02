@@ -1,0 +1,8 @@
+{
+  "name": "taiji-mini-tools",
+  "private": true,
+  "description": "本地素材处理脚本依赖（不参与小程序构建）",
+  "dependencies": {
+    "sharp": "^0.34.4"
+  }
+}
