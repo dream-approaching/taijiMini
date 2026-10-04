@@ -5,7 +5,7 @@ chcp 65001 >nul
 rem ============================================================
 rem  按图片文件夹顺序，替换 dataConfig.json 的 imageDataConfig key
 rem  - 只改 key 末尾文件名，value 不动
-rem  - 图片比现有 key 多：补 83/taiji/文件名 -> {"desc":""}
+rem  - 图片比现有 key 多：补 83/{dataConfig所在文件夹名}/文件名 -> {"desc":""}
 rem ============================================================
 
 set "SCRIPT_DIR=%~dp0"

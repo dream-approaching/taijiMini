@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * 按图片文件夹顺序，替换 dataConfig.json 里 imageDataConfig 的 key 文件名。
- * value 原样保留；多出来的图片用模板补：83/taiji/文件名 -> {"desc":""}
+ * value 原样保留；多出来的图片用模板补：83/{dataConfig所在文件夹名}/文件名 -> {"desc":""}
  *
  * 用法:
  *   node sync_image_config.js "图片文件夹" "dataConfig.json路径"
@@ -11,7 +11,6 @@ const fs = require('fs');
 const path = require('path');
 
 const IMAGE_EXTS = new Set(['.png', '.jpg', '.jpeg']);
-const EXTRA_PREFIX = '83/taiji/';
 
 function listImages(folder) {
   return fs
@@ -49,6 +48,8 @@ function syncConfig(imageDir, jsonPath) {
   }
 
   const oldEntries = Object.entries(data.imageDataConfig);
+  const folderName = path.basename(path.dirname(jsonPath));
+  const extraPrefix = `83/${folderName}/`;
   const next = {};
 
   images.forEach((filename, i) => {
@@ -58,7 +59,7 @@ function syncConfig(imageDir, jsonPath) {
       next[newKey] = value;
       console.log(`[保留] ${oldKey} -> ${newKey}`);
     } else {
-      const newKey = `${EXTRA_PREFIX}${filename}`;
+      const newKey = `${extraPrefix}${filename}`;
       next[newKey] = { desc: '' };
       console.log(`[新增] ${newKey}`);
     }

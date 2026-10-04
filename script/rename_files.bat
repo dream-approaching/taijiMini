@@ -1,7 +1,7 @@
 @echo off
 setlocal EnableDelayedExpansion
 
-rem 内部改名逻辑：对指定文件夹内文件去空格，并截取 name[20:26]+扩展名
+rem 内部改名逻辑：去空格后，保留主文件名最后 6 位 + 原扩展名
 rem 用法: rename_files.bat "E:\某图片文件夹"
 
 set "TARGET=%~1"
@@ -25,7 +25,13 @@ for /f "delims=" %%F in ('dir /b /a-d 2^>nul') do (
   rem 跳过脚本自身相关文件（与 name.py 跳过 py 类似）
   if /i not "!ext!"==".bat" if /i not "!ext!"==".js" if /i not "!last2!"=="py" if /i not "!ext!"=="json" (
     set "name=!filename: =!"
-    set "newname=!name:~20,6!!name:~-4!"
+    set "fileext=!name:~-4!"
+    set "stem=!name:~0,-4!"
+    if /i "!name:~-5!"==".jpeg" (
+      set "fileext=!name:~-5!"
+      set "stem=!name:~0,-5!"
+    )
+    set "newname=!stem:~-6!!fileext!"
     if not "!filename!"=="!newname!" if not "!newname!"=="" (
       if not exist "!newname!" (
         ren "%%F" "!newname!"

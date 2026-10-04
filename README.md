@@ -30,7 +30,7 @@
   - 打开 video_number 视频，点击手机的截图
   - 双击 `script/rename_and_compress.bat`，选择图片文件夹，按提示设置体积上限（默认 160KB）和压缩轮数；脚本会先按规则改名，再批量压缩到上限以下
   - 也可单独使用 `script/name.bat`（只改名）或 `script/compress_images.bat`（只压缩）
-  - 改完名后双击 `script/sync_image_config.bat`，依次选择图片文件夹和对应 `dataConfig.json`，按图片顺序同步 `imageDataConfig` 的文件名（描述不动；多出的图会补空 desc）
+  - 压缩完成后，再双击 `script/sync_image_config.bat`，依次选择图片文件夹和对应 `dataConfig.json`，按图片顺序同步 `imageDataConfig` 的文件名（描述不动；多出的图会补 `83/文件夹名/文件名` 和空 desc）
 
 #### 云存储需要放的文件
 
