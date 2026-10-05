@@ -6,8 +6,13 @@ cloud.init({
 
 exports.main = async () => {
   return {
-    version: '2.4.1',
+    version: '2.4.3',
     versionHistory: [
+      {
+        version: '2.4.3',
+        time: '2026.10.05',
+        desc: ['83式：新增28-35式'],
+      },
       {
         version: '2.4.2',
         time: '2024.9.22',
