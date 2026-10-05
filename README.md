@@ -34,8 +34,8 @@
 
 #### 云存储需要放的文件
 
-- 视频文件：video_attack video_detail video_normal video_number
-- 图片文件：png、jpg
-- 数据文件：dataConfig.json
+- 视频文件: video_attack video_detail video_normal video_number
+- 图片文件: png、jpg
+- 数据文件: dataConfig.json
 
 客户端中的 dataConfig.json 不会直接生效，只是做一个备份作用，运行时取的是云存储中的 dataConfig.json 文件

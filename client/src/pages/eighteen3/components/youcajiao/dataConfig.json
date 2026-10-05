@@ -1,91 +1,94 @@
 {
   "imageDataConfig": {
     "83/youcajiao/103622.jpg": {
-      "desc": ""
+      "desc": "胸腔右转",
+      "block": "右擦脚"
     },
     "83/youcajiao/103639.jpg": {
-      "desc": ""
+      "desc": "胸腔左转，顺缠引下来，在腹前中线"
     },
     "83/youcajiao/103649.jpg": {
-      "desc": ""
+      "desc": "两腕交叉"
     },
     "83/youcajiao/103657.jpg": {
-      "desc": ""
+      "desc": "双逆缠，约下沉"
     },
     "83/youcajiao/103702.jpg": {
-      "desc": ""
+      "desc": "胸腔右转，虎口贴胸"
     },
     "83/youcajiao/103706.jpg": {
-      "desc": ""
+      "desc": "挤出去"
     },
     "83/youcajiao/103711.jpg": {
-      "desc": ""
+      "desc": "下榻捋到胸前"
     },
     "83/youcajiao/103720.jpg": {
-      "desc": ""
+      "desc": "提膝挒开，左手不动"
     },
     "83/youcajiao/103723.jpg": {
-      "desc": ""
+      "desc": "擒拿蹬出去，合住，左手在右小臂上方"
     },
     "83/youcajiao/103725.jpg": {
-      "desc": ""
+      "desc": "踏实，重心前移，两手逆缠 两腕相贴 左手在上，胸腔左转，跪膝，眼神看右肩方向"
     },
     "83/youcajiao/103729.jpg": {
-      "desc": ""
+      "desc": "提膝，两手往上架，分手拍脚"
     },
     "83/youcajiao/103742.jpg": {
-      "desc": ""
+      "desc": "双逆缠加掤劲",
+      "block": "左擦脚"
     },
     "83/youcajiao/103746.jpg": {
-      "desc": ""
+      "desc": "外摆脚，两手合手，左手在右小臂上方"
     },
     "83/youcajiao/103749.jpg": {
-      "desc": ""
+      "desc": "踏实，重心前移，两手逆缠 两腕相贴 右手在上，胸腔右转，跪膝，眼神看左肩方向"
     },
     "83/youcajiao/103752.jpg": {
-      "desc": ""
+      "desc": "提膝，两手往上架，分手拍脚"
     },
     "83/youcajiao/103756.jpg": {
-      "desc": ""
+      "desc": "双逆缠加掤劲",
+      "block": "转身左蹬脚"
     },
     "83/youcajiao/103758.jpg": {
-      "desc": ""
+      "desc": "翻掌合手"
     },
     "83/youcajiao/103800.jpg": {
-      "desc": ""
+      "desc": "以右脚跟为轴，左转90度，右手推出到胸前同时两手往两侧掤开"
     },
     "83/youcajiao/103809.jpg": {
-      "desc": ""
+      "desc": "双手合手，两腕交叉"
     },
     "83/youcajiao/103811.jpg": {
-      "desc": ""
+      "desc": "双手握拳，双逆缠螺旋下沉"
     },
     "83/youcajiao/103812.jpg": {
-      "desc": ""
+      "desc": "双顺缠螺旋上升"
     },
     "83/youcajiao/103814.jpg": {
-      "desc": ""
+      "desc": "双逆缠，先走肘，虎口贴胸"
     },
     "83/youcajiao/103815.jpg": {
-      "desc": ""
+      "desc": "左脚蹬出去，同时双拳往两侧打出，然后收回"
     }
   },
   "videoDataConfig": {
     "attack": {
       "title": "攻防含义",
-      "shotInfo": "吴少华 2019年11月22日 娄底市"
+      "shotInfo": "吴少华 2019年10月30日 娄底市"
     },
     "detail": {
       "title": "动作要领",
-      "shotInfo": "吴少华 2019年11月22日 娄底市"
+      "shotInfo": "吴少华 2019年10月30日 娄底市"
     },
     "number": {
       "title": "分解动作",
-      "shotInfo": "吴少华 2019年11月22日 娄底市"
+      "shotInfo": "吴少华 2019年10月30日 娄底市"
     },
     "normal": {
       "title": "正常",
-      "shotInfo": "吴少华 2019年11月22日 娄底市"
+      "shotInfo": "吴少华 2019年10月30日 娄底市"
     }
   }
 }
