@@ -1,0 +1,18 @@
+client/src/pages/eighteen3/components/bishenchui/dataConfig.json
+  h_544aa6b3966a47 9-11,17,22,25
+client/src/pages/eighteen3/components/daojuangong/dataConfig.json
+  h_544aa6b3966a47 11
+client/src/pages/eighteen3/components/youcajiao/dataConfig.json
+  h_544aa6b3966a47 4,8,17,32,45
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "5.30.1",
+  "base_commit_sha": "082249bdf623601d3f05ee9d3ceb4395a75b0c7e",
+  "prompts": {},
+  "humans": {
+    "h_544aa6b3966a47": {
+      "author": "longzi <longzizheng@gmail.com>"
+    }
+  }
+}
