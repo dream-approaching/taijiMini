@@ -1,0 +1,14 @@
+client/src/pages/warnup/dataConfig.json
+  h_544aa6b3966a47 5-9,12-13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "5.30.1",
+  "base_commit_sha": "122b06bc8daf6915042caa035e55ae72831a1e9f",
+  "prompts": {},
+  "humans": {
+    "h_544aa6b3966a47": {
+      "author": "longzi <longzizheng@gmail.com>"
+    }
+  }
+}
