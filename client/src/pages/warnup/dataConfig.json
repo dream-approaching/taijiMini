@@ -2,9 +2,15 @@
   "imageDataConfig": {},
 
   "videoDataConfig": {
+    "warmup": {
+      "title": "热身运动",
+      "shotInfo": "2026年10月17日",
+      "index": 1
+    },
     "video": {
       "title": "集体热身",
-      "shotInfo": "郑金寿 2020年06月14日 深圳市"
+      "shotInfo": "郑金寿 2020年06月14日 深圳市",
+      "index": 2
     }
   }
 }
