@@ -1,0 +1,40 @@
+client/src/pages/eighteen3/components/baiheliangchi/dataConfig.json
+  h_544aa6b3966a47 15,28,48
+client/src/pages/eighteen3/components/baiheliangchi2/dataConfig.json
+  h_544aa6b3966a47 11
+client/src/pages/eighteen3/components/baotoutuishan/dataConfig.json
+  h_544aa6b3966a47 17,34,55
+client/src/pages/eighteen3/components/danbian/dataConfig.json
+  h_544aa6b3966a47 17
+client/src/pages/eighteen3/components/dangtoupao/dataConfig.json
+  h_544aa6b3966a47 17
+client/src/pages/eighteen3/components/huxinchui/dataConfig.json
+  h_544aa6b3966a47 17
+client/src/pages/eighteen3/components/lanzhayi/dataConfig.json
+  h_544aa6b3966a47 22
+client/src/pages/eighteen3/components/qiantangaobu/dataConfig.json
+  h_544aa6b3966a47 17
+client/src/pages/eighteen3/components/qianzhaohouzhao/dataConfig.json
+  h_544aa6b3966a47 17
+client/src/pages/eighteen3/components/quedilong/dataConfig.json
+  h_544aa6b3966a47 17
+client/src/pages/eighteen3/components/xiexing2/dataConfig.json
+  h_544aa6b3966a47 19,39
+client/src/pages/eighteen3/components/yanshouhongchui2/dataConfig.json
+  h_544aa6b3966a47 48
+client/src/pages/eighteen3/components/yunshou/dataConfig.json
+  h_544aa6b3966a47 17
+client/src/pages/eighteen3/components/yunshou2/dataConfig.json
+  h_544aa6b3966a47 17
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "5.30.1",
+  "base_commit_sha": "4f2d88375a3bce0139d1fae7b24439880aca1958",
+  "prompts": {},
+  "humans": {
+    "h_544aa6b3966a47": {
+      "author": "longzi <longzizheng@gmail.com>"
+    }
+  }
+}
