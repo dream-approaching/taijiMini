@@ -1,0 +1,14 @@
+client/src/pages/eighteen3/components/qiantangaobu/dataConfig.json
+  h_544aa6b3966a47 3-80,85,89,93,97
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "5.30.10",
+  "base_commit_sha": "a1673dfe1b571cc9d1c1d95bf42144ad226fb4ff",
+  "prompts": {},
+  "humans": {
+    "h_544aa6b3966a47": {
+      "author": "longzi <longzizheng@gmail.com>"
+    }
+  }
+}
