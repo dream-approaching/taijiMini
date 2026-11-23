@@ -20,17 +20,14 @@
 - 视频处理
   - 用手机自带视频编辑工具，把多个动作的裁减为单个动作
   - 再把单个动作裁减为 4 段，分别为 video_attack video_detail video_normal video_number
-  - 把导出的文件用微信，文件助手发送到电脑(因为压缩出来的还是太大了，借助微信压缩)
-  - 在电脑上右键打开文件，此时的文件是经过微信压缩的，尺寸小很多，保存到已完成文件夹
-  - 文件重命名 video_attack video_detail video_normal video_number
-  - 上传到小程序云开发的云存储
-  - 尺寸15M以下
+  - 导出后传到电脑，文件重命名为 video_attack / video_detail / video_normal / video_number
+  - 本机需先安装 ffmpeg（仅首次）：`winget install Gyan.FFmpeg`，安装后确认 `ffmpeg -version` 可用（必要时重开终端）
+  - 双击 `script/process_videos.bat`，选择视频文件夹，按提示设置体积上限（默认 15MB）和压缩轮数；每个视频至少压缩 1 轮，超标会继续压
+  - 压缩完成后上传到小程序云开发的云存储（建议 15MB 以下）
 - 图片处理
   - 图片用 U 盘传到电脑，用微信传名字会被改掉
   - 打开 video_number 视频，点击手机的截图
-  - 双击 `script/rename_and_compress.bat`，选择图片文件夹，按提示设置体积上限（默认 160KB）和压缩轮数；脚本会先按规则改名，再批量压缩到上限以下
-  - 也可单独使用 `script/name.bat`（只改名）或 `script/compress_images.bat`（只压缩）
-  - 压缩完成后，再双击 `script/sync_image_config.bat`，依次选择图片文件夹和对应 `dataConfig.json`，按图片顺序同步 `imageDataConfig` 的文件名（描述不动；多出的图会补 `83/文件夹名/文件名` 和空 desc）
+  - 双击 `script/rename_and_compress.bat`，选择图片文件夹，按提示设置体积上限（默认 160KB）和压缩轮数；脚本会依次：改名 → 压缩 → 选择对应 `dataConfig.json` 同步 `imageDataConfig` 的文件名（描述不动；多出的图会补 `83/文件夹名/文件名` 和空 desc）
 
 #### 云存储需要放的文件
 
