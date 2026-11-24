@@ -1,0 +1,14 @@
+client/src/pages/eighteen3/components/qiantangaobu/dataConfig.json
+  h_544aa6b3966a47 4-5,8,11,14,17,20,23,26,29,32,35-36,39,42,45,48,51,54,57,60,63,66,69,72-73,76,79,82
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "5.30.10",
+  "base_commit_sha": "29e786978fabf99f0e9d62b67f073b15e710e6b8",
+  "prompts": {},
+  "humans": {
+    "h_544aa6b3966a47": {
+      "author": "longzi <longzizheng@gmail.com>"
+    }
+  }
+}
